@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Hi there👋,I'm Shengbang Liu 🧑‍🚀, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/) 🎓. I am currently interning at the [HMI Lab](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). During my undergraduate studies, I am also fortunate to be mentored by Prof. [Weishi Zheng](https://www.isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home) 🌟. My research interests mainly include robotic manipulation 🤖 and multimodal large models 🌅.
+Hi there👋,I'm Shengbang Liu🧑‍🚀, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/)🎓. I am currently interning at the [HMI Lab](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). During my undergraduate studies, I am also fortunate to be mentored by Prof. [Weishi Zheng](https://www.isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home)🌟. My research interests mainly include robotic manipulation 🤖 and multimodal large models🌅.
 
 Publication
 ======
@@ -16,17 +16,16 @@ Decomposed Object Manipulation via Dual-Actor Policy
 
 Education
 ======
--Bachelor's in Computer Science and Technology, Sun Yat-sen University (2023.9–Present)
--Sun Yat-sen Memorial Middle School (2017.9–2023.6)
+- Bachelor's in Computer Science and Technology, Sun Yat-sen University (2023.9–Present)
+- Sun Yat-sen Memorial Middle School (2017.9–2023.6)
 
 
 Selected Awards and Honors
 ======
--[Sep,2025]: National Scholarship (Top 0.2% nationwide)
--[Sep,2025]: First Class Academic Scholarship (top 5% in Sun Yat-sen University)
--[Sep,2024]: National Scholarship (Top 0.2% nationwide)
--[Sep,2024]: First Class Academic Scholarship (top 5% in Sun Yat-sen University) 
-
+- [Sep,2025]: National Scholarship (Top 0.2% nationwide)
+- [Sep,2025]: First Class Academic Scholarship (top 5% in Sun Yat-sen University)
+- [Sep,2024]: National Scholarship (Top 0.2% nationwide)
+- [Sep,2024]: First Class Academic Scholarship (top 5% in Sun Yat-sen University) 
 
 
 Personal Interests
