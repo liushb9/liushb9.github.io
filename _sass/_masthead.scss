@@ -19,7 +19,10 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 1em 1em 1em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1em;
     font-family: "Times New Roman", Times, serif;
 
     @include breakpoint($x-large) {
@@ -28,6 +31,7 @@
 
     nav {
       z-index: 10;
+      width: 100%;
     }
 
     a {

@@ -41,17 +41,32 @@ fig.patch.set_facecolor('white')
 ax.set_extent([-180, 180, -60, 90], crs=ccrs.PlateCarree())
 
 # 4. 添加地图特征
-# 使用淡紫色/淡丁香色，类似原图 (#D8BFD8)
-land_color = '#D8BFD8'
+# 使用深蓝色底图
+land_color = '#1E3A8A'
 ax.add_feature(cfeature.LAND.with_scale('110m'), facecolor=land_color, edgecolor='white', linewidth=0.8)
 ax.add_feature(cfeature.OCEAN.with_scale('110m'), facecolor='white')
 ax.add_feature(cfeature.COASTLINE.with_scale('110m'), linewidth=0.5, edgecolor='white')
 ax.add_feature(cfeature.BORDERS.with_scale('110m'), linestyle='-', edgecolor='white', linewidth=0.5)
 
-# 5. 绘制城市标记点（红色小点）
+# 5. 绘制城市标记点（亮金色）
+# 北京和广州使用星星标记，其他城市使用小圆点
+gold_color = '#FFD700'
 for city, lon, lat in cities_data:
-    ax.plot(lon, lat, 'o', color='red', markersize=3, 
-            transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
+    if city in ['Beijing', 'Guangzhou']:
+        # 北京和广州使用星星标记，更大一点
+        ax.plot(lon, lat, '*', color=gold_color, markersize=8, 
+                transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
+        # 添加文本标签（带文本框）
+        ax.text(lon, lat + 2, city, transform=ccrs.PlateCarree(), 
+                fontsize=8, color='black', weight='bold',
+                fontfamily='serif',
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='white', 
+                         edgecolor='gray', alpha=0.8, linewidth=0.5),
+                ha='center', va='bottom', zorder=6)
+    else:
+        # 其他城市使用小圆点
+        ax.plot(lon, lat, 'o', color=gold_color, markersize=3, 
+                transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
 
 # 6. 移除坐标轴边框
 ax.spines['geo'].set_visible(False)
