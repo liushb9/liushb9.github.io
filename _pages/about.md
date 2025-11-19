@@ -30,4 +30,8 @@ Selected Awards and Honors
 
 Personal Interests
 ======
-In my free time, I enjoy playing basketball 🏀, soccer ⚽, reading 📚, and watching documentaries 🎬. I have a deep curiosity and a strong desire to explore the world🌍. If you share similar interests, I’d be more than happy to become friends with you! 🤝
+In my free time, I enjoy basketball 🏀, soccer ⚽, traveling ✈️, reading 📚 and documentaries 🎬. I have a deep curiosity and a strong desire to explore the world🌍. If you share similar interests, I’d be more than happy to become friends with you! 🤝
+
+<div style="width: 100%; max-width: 100%; margin-top: 2em; overflow: hidden;">
+  <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=JHwSe0hpWslgMZ3XDNF2Scw8_vYLRfXvMykkTfRYY48&cl=ffffff&w=a"></script>
+</div>
