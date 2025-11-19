@@ -179,11 +179,12 @@
 
   a {
     display: block;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     padding: 0.5rem 0;
     font-size: $type-size-4;
     color: $masthead-link-color;
     text-decoration: none;
+    white-space: nowrap;
 
     &:hover {
       color: $masthead-link-color-hover;
@@ -191,6 +192,7 @@
   }
 
   button {
+    display: none !important; // 隐藏下拉按钮
     position: absolute;
     height: 2.5rem;
     right: 0;
@@ -204,11 +206,14 @@
   }
 
   .visible-links {
-    display: table;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 
     li {
-      display: table-cell;
+      display: flex;
       vertical-align: middle;
+      flex-shrink: 0;
 
       &:first-child {
         font-weight: bold;
@@ -253,6 +258,7 @@
   }
 
   .hidden-links {
+    display: none !important; // 始终隐藏下拉菜单
     position: absolute;
     top: 100%;
     right: 0;
