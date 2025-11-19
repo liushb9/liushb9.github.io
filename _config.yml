@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Dudu's Homepage"
+title                    : "Shengbang Liu"
 title_separator          : "-"
 name                     : &name "Shengbang Liu"
 # description              : &description "To see the world,things dangerous to come to,to see behind walls,draw closer,to find each other and to feel.That is the meaning of life."
@@ -22,9 +22,9 @@ repository               : "liushb9/liushb9.github.io"
 author:
   # Biographic information
   avatar           : "profile1.png"
-  name             : "Shengbang Liu"
+  name             : "Shengbang Liu | 刘盛邦"
   # pronouns         : "he/him"  
-  bio              : "To see the world,things dangerous to come to,to see behind walls,draw closer,to find each other and to feel.That is the meaning of life."
+  bio              : "I have loved the stars too fondly to be fearful of the night"
   location         : "Beijing, China"
   employer         : "Peking University"
   uri              : # URL

@@ -1,6 +1,6 @@
 ---
 permalink: /
-# title: ""
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
@@ -23,10 +23,10 @@ Education
 
 Selected Awards and Honors
 ======
-- \[Sep, 2025\]: National Scholarship (Top 0.2% nationwide)
-- \[Sep, 2025\]: First Class Academic Scholarship (top 5% in Sun Yat-sen University)
-- \[Sep, 2024\]: National Scholarship (Top 0.2% nationwide)
-- \[Sep, 2024\]: First Class Academic Scholarship (top 5% in Sun Yat-sen University)
+- \[Sep,2025\]: National Scholarship (Top 0.2% nationwide)
+- \[Sep,2025\]: First Class Academic Scholarship (top 5% in Sun Yat-sen University)
+- \[Sep,2024\]: National Scholarship (Top 0.2% nationwide)
+- \[Sep,2024\]: First Class Academic Scholarship (top 5% in Sun Yat-sen University)
 
 Personal Interests
 ======
