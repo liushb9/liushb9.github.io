@@ -13,18 +13,8 @@ var $hlinks = $('#site-nav .hidden-links');
 var breaks = [];
 
 function updateNav() {
-  // 禁用贪婪导航功能 - 所有链接始终显示
-  // 确保所有链接都在可见列表中
-  if($hlinks.children().length > 0) {
-    $hlinks.children().appendTo($vlinks);
-  }
-  // 隐藏下拉按钮和隐藏链接菜单
-  $btn.addClass('hidden');
-  $hlinks.addClass('hidden');
-  
-  // 原始贪婪导航代码已禁用
-  /*
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+
+  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 10;
 
   // The visible list is overflowing the nav
   if($vlinks.width() > availableSpace) {
@@ -65,7 +55,7 @@ function updateNav() {
   if($vlinks.width() > availableSpace) {
     updateNav();
   }
-  */
+
 }
 
 // Window listeners
