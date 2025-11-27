@@ -8,9 +8,6 @@ redirect_from:
 ---
 
 <style>
-.page__content {
-  text-align: center;
-}
 .page__content a {
   text-decoration: none;
 }
@@ -24,11 +21,6 @@ redirect_from:
 .page__content dl,
 .page__content dd {
   font-size: 1em;
-}
-.page__content ul,
-.page__content ol {
-  list-style-position: inside;
-  padding-left: 0;
 }
 </style>
 
