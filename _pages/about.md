@@ -8,6 +8,9 @@ redirect_from:
 ---
 
 <style>
+.page__content {
+  text-align: center;
+}
 .page__content a {
   text-decoration: none;
 }
@@ -22,11 +25,16 @@ redirect_from:
 .page__content dd {
   font-size: 1em;
 }
+.page__content ul,
+.page__content ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
 </style>
 
 About me🧑‍🚀
 ======
-Hi there! 👋 I'm Shengbang Liu, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/). Currently, I am a research intern at [HMI Lab](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). I am also privileged to be mentored by Prof. [Weishi Zheng](https://isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home)🌟 during my undergraduate studies.
+Hi there! 👋 I'm Shengbang Liu, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/). Currently, I am a research intern at [HMI Lab](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). I am also privileged to be mentored by Prof. [Weishi Zheng](https://isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home) during my undergraduate studies.
 
 My research interests primarily focus on **Robotic Manipulation** 🤖, with the goal of developing generalizable, versatile, and robust robot agents. I am also exploring **Reinforcement Learning** 🍭 and **Multimodal Large Models** 🧠.
 
