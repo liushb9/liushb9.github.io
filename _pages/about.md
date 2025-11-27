@@ -17,8 +17,8 @@ I am driven by a passion for exploration 🤩, the joy of creation 💡, and the
 
 Publication
 ======
-- Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling (submitted to CVPR2026)
-- Decomposed Object Manipulation via Dual-Actor Policy (submitted to ICRA2026)
+- Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling (In Submission, 2025)
+- Decomposed Object Manipulation via Dual-Actor Policy (In Submission, 2025)
 
 Education
 ======
@@ -36,7 +36,7 @@ Selected Awards and Honors
 
 Personal Interests
 ======
-Beyond academics and research, I embrace the vivid rhythm of life through basketball 🏀, photography 📸, comedy 🤣 and so on. To me, life is a continuous loop of debugging and discovering.Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you! 🥳
+Beyond academics and research, I embrace the vivid rhythm of life through basketball 🏀, photography 📸, and comedy 🤣, among others. To me, life is a continuous loop of debugging and discovering. Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you! 🥳
 
 <div style="width: 100%; max-width: 100%; margin-top: 2em; overflow: hidden;">
   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=JHwSe0hpWslgMZ3XDNF2Scw8_vYLRfXvMykkTfRYY48&cl=ffffff&w=a"></script>
