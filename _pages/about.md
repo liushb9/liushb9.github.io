@@ -9,14 +9,18 @@ redirect_from:
 
 About me
 ======
-Hi there👋,I'm Shengbang Liu🧑‍🚀, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/)🎓. I am currently interning at the [HMI Lab](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). During my undergraduate studies, I am also fortunate to be mentored by Prof. [Weishi Zheng](https://isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home)🌟. My research interests mainly include Embodied AI🤖,Multimodal Large Models🧠 and Computer Vision👀.
+Hi there! 👋 I'm Shengbang Liu 🧑‍🚀, an undergraduate student in the School of Computer Science and Engineering at Sun Yat-sen University 🎓.
 
-My passion lies in the exploring🤩, the creating💡, and the exhilarating feeling of what's next🚀!
+Currently, I am a research intern at HMI Lab and Simple Robots, supervised by Prof. Shanghang Zhang. I am also privileged to be mentored by Prof. Weishi Zheng at the Intelligence Science and System Lab (iSEE) 🌟 during my undergraduate studies.
+
+My research interests primarily focus on Robotic Manipulation 🤖, with the goal of developing generalizable, versatile, and robust robot agents. I am also exploring Reinforcement Learning 🍭 and Multimodal Large Models 🧠.
+
+I am driven by a passion for exploration 🤩, the joy of creation 💡, and the excitement of what comes next! 🚀
 
 Publication
 ======
-- Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling
-- Decomposed Object Manipulation via Dual-Actor Policy
+- Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling (submitted to CVPR2026)
+- Decomposed Object Manipulation via Dual-Actor Policy (submitted to ICRA2026)
 
 Education
 ======
@@ -34,7 +38,7 @@ Selected Awards and Honors
 
 Personal Interests
 ======
-In my free time, I enjoy basketball 🏀, soccer ⚽, reading 📚, photography 📸 and comedy 🤣. Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you! 🥳
+Beyond academics and research, I embrace the vivid rhythm of life through basketball 🏀, photography 📸,comedy 🤣 and so on. To me, life is a continuous loop of debugging and discovering.Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you! 🥳
 
 <div style="width: 100%; max-width: 100%; margin-top: 2em; overflow: hidden;">
   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=JHwSe0hpWslgMZ3XDNF2Scw8_vYLRfXvMykkTfRYY48&cl=ffffff&w=a"></script>
