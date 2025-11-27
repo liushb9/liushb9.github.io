@@ -14,6 +14,14 @@ redirect_from:
 .page__content a:hover {
   text-decoration: none;
 }
+.page__content p,
+.page__content li,
+.page__content ul,
+.page__content ol,
+.page__content dl,
+.page__content dd {
+  font-size: 1em;
+}
 </style>
 
 About me🧑‍🚀

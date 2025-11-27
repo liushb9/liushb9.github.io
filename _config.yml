@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Shengbang Liu | 刘盛邦"
+title                    : "Shengbang Liu"
 title_separator          : "-"
-name                     : &name "Shengbang Liu | 刘盛邦"
+name                     : &name "Shengbang Liu"
 # description              : &description "To see the world,things dangerous to come to,to see behind walls,draw closer,to find each other and to feel.That is the meaning of life."
 url                      : https://liushb9.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
