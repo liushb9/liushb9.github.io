@@ -23,7 +23,7 @@
     align-items: center;
     height: 100%;
     padding: 0 1em;
-    font-family: "Crimson Text", serif;
+    font-family: "Times New Roman", Times, serif;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
