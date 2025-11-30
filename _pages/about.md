@@ -39,23 +39,23 @@ Publication📃
 
 Education🎓
 ======
-- <img src="images/sysu.jpg" alt="SYSU Logo" style="height: 1.2em; vertical-align: middle; margin-right: 0.5em;"> Bachelor's in Computer Science and Technology, Sun Yat-sen University (2023.9–Present)
-- <img src="images/jz.jpg" alt="JZ Logo" style="height: 1.2em; vertical-align: middle; margin-right: 0.5em;"> Sun Yat-sen Memorial Middle School (2017.9–2023.6)
+- <img src="images/sysu.jpg" alt="SYSU Logo" style="height: 1.2em; vertical-align: middle;"> Bachelor's in Computer Science and Technology, Sun Yat-sen University (2023.9–Present)
+- <img src="images/jz.jpg" alt="JZ Logo" style="height: 1.2em; vertical-align: middle;"> Sun Yat-sen Memorial Middle School (2017.9–2023.6)
 
 Selected Awards and Honors🏆
 ======
-- National Scholarship, 2025, 2024
+- **National Scholarship**, 2025, 2024
 - First Class Academic Scholarship, 2025, 2024
 - First Prize in the CSP-J/S, 2019
 - First Prize in the National Olympiad in Informatics in Provinces, 2018
 
 Personality🥳
 ======
-Beyond academics and research, I embrace the vivid rhythm of life through basketball 🏀, photography 📸, reading 📚, and comedy 🤣. To me, life is a continuous loop of debugging and discovering. Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you!
+Beyond academics and research, I embrace the vivid rhythm of life through basketball 🏀, photography 📸, reading 📚, and comedy 🤣, among others. To me, life is a continuous loop of debugging and discovering. Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you!
 
 Contact Me💬
 ======
-I truly believe that open discussions and debates drive innovation in academia. I’m always eager to hear your thoughts, fresh ideas, or even disagreements regarding my work. Having received so much support along my journey, I am always willing to assist others. I am also excited to connect on a broader level, so feel free to hit me up to talk about business ventures, life experiences, or our wildest dreams.
+Firmly believing that open discussions and debates drive innovation in academia, I welcome your thoughts, fresh ideas, and even disagreements regarding my work. Grateful for the support I’ve received along my journey, I am equally dedicated to assisting others. Beyond research, connecting on a broader level is always exciting to me, so feel free to reach out to discuss business ventures, life experiences, or our wildest dreams.
 
 <div style="width: 100%; max-width: 100%; margin-top: 2em; overflow: hidden;">
   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=JHwSe0hpWslgMZ3XDNF2Scw8_vYLRfXvMykkTfRYY48&cl=ffffff&w=a"></script>

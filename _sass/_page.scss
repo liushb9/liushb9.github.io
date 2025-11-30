@@ -18,9 +18,9 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(11 of 12 last);
+    @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(1 of 12);
+    @include suffix(2 of 12);
   }
 
   .page__inner-wrap {
@@ -86,13 +86,13 @@
 
   dt {
     margin-top: 1em;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Merriweather", serif;
     font-weight: bold;
   }
 
   dd {
     margin-left: 1em;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Merriweather", serif;
     font-size: $type-size-6;
   }
 
