@@ -1,0 +1,72 @@
+<div class="publications">
+<h3>First Author/Co-First Author</h3>
+<ol class="bibliography">
+{% for link in site.data.publications.main %}
+{% if link.authors contains "Shengbang Liu*" %}
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    {% if link.image %}
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 270px; height: auto;">
+    {% if link.conference_short %}
+    <abbr class="badge">{{ link.conference_short }}</abbr>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
+      <div class="author">{{ link.authors }}</div>
+      <div class="periodical"><em>{{ link.conference }}</em>
+      </div>
+    <div class="links">
+      {% if link.pdf %}
+      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      {% endif %}
+      {% if link.page %}
+      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+      {% endif %}
+      {% if link.notes %}
+      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</li>
+{% endif %}
+{% endfor %}
+</ol>
+
+<h3>Co-Author</h3>
+<ol class="bibliography">
+{% for link in site.data.publications.main %}
+{% if link.authors contains "Shengbang Liu" and link.authors does not contain "Shengbang Liu*" %}
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    {% if link.image %}
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 270px; height: auto;">
+    {% if link.conference_short %}
+    <abbr class="badge">{{ link.conference_short }}</abbr>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
+      <div class="author">{{ link.authors }}</div>
+      <div class="periodical"><em>{{ link.conference }}</em>
+      </div>
+    <div class="links">
+      {% if link.pdf %}
+      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      {% endif %}
+      {% if link.notes %}
+      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</li>
+{% endif %}
+{% endfor %}
+</ol>
+</div>
