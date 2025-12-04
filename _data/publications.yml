@@ -1,15 +1,15 @@
 main:
   - title: "Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling"
-    authors: <strong>Yueru Jia*</strong>, Jiaming Liu*, <strong>Shengbang Liu*</strong>, Rui Zhou, Wanhe Yu, Yuyang Yan, Xiaowei Chi, Yandong Guo, Boxin Shi, Shanghang Zhang
-    conference_short: arXiv 2025
-    conference: arXiv Preprint, 2025.
-    pdf: https://arxiv.org/pdf/2512.03044
-    page: https://video2act.github.io/
-    image: ./images/Video2Act.png
+    authors: "<strong>Yueru Jia*</strong>, Jiaming Liu*, <strong>Shengbang Liu*</strong>, Rui Zhou, Wanhe Yu, Yuyang Yan, Xiaowei Chi, Yandong Guo, Boxin Shi, Shanghang Zhang"
+    conference_short: "arXiv 2025"
+    conference: "arXiv Preprint, 2025."
+    pdf: "https://arxiv.org/pdf/2512.03044"
+    page: "https://video2act.github.io/"
+    image: "./images/Video2Act.png"
 
   - title: "Decomposed Object Manipulation via Dual-Actor Policy"
-    authors: Bin Fan, Jianjian Jiang, Zhuohao Li, Yixiang He, Xiaoming Wu, Yihan Yang, <strong>Shengbang Liu</strong>, Weishi Zheng
-    conference_short: arXiv 2025
-    conference: arXiv Preprint, 2025.
-    pdf: https://arxiv.org/abs/2511.05129
-    image: ./images/Decomposed Object Manipulation via Dual-Actor Policy.png
+    authors: "Bin Fan, Jianjian Jiang, Zhuohao Li, Yixiang He, Xiaoming Wu, Yihan Yang, <strong>Shengbang Liu</strong>, Weishi Zheng"
+    conference_short: "arXiv 2025"
+    conference: "arXiv Preprint, 2025."
+    pdf: "https://arxiv.org/abs/2511.05129"
+    image: "./images/Decomposed Object Manipulation via Dual-Actor Policy.png"

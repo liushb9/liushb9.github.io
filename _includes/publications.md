@@ -1,3 +1,4 @@
+{% include base_path %}
 <div class="publications">
 <h3>First Author/Co-First Author</h3>
 <ol class="bibliography">
@@ -7,7 +8,8 @@
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %}
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 270px; height: auto;">
+    {% assign image_path = link.image | replace: './images/', '/images/' %}
+    <img src="{{ image_path | prepend: base_path }}" class="teaser img-fluid z-depth-1" style="width: 270px; height: auto;">
     {% if link.conference_short %}
     <abbr class="badge">{{ link.conference_short }}</abbr>
     {% endif %}
@@ -39,12 +41,14 @@
 <h3>Co-Author</h3>
 <ol class="bibliography">
 {% for link in site.data.publications.main %}
-{% if link.authors contains "Shengbang Liu" and link.authors does not contain "Shengbang Liu*" %}
+{% if link.authors contains "Shengbang Liu" %}
+  {% unless link.authors contains "Shengbang Liu*" %}
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %}
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 270px; height: auto;">
+    {% assign image_path = link.image | replace: './images/', '/images/' %}
+    <img src="{{ image_path | prepend: base_path }}" class="teaser img-fluid z-depth-1" style="width: 270px; height: auto;">
     {% if link.conference_short %}
     <abbr class="badge">{{ link.conference_short }}</abbr>
     {% endif %}
@@ -66,6 +70,7 @@
   </div>
 </div>
 </li>
+  {% endunless %}
 {% endif %}
 {% endfor %}
 </ol>
