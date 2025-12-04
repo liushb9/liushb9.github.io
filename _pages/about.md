@@ -32,7 +32,7 @@ My research interests primarily focus on **Robotic Manipulation** 🤖, with the
 
 I am driven by a passion for exploration, the joy of creation, and the excitement of what comes next! 🤩
 
-Publication📃
+Publications📃
 ======
 
 {% include publications.md %}

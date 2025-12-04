@@ -3,38 +3,38 @@
 .pub-row {
   display: flex;
   align-items: center; /* 垂直居中核心代码 */
-  margin-bottom: 40px; /* 论文之间的间距 */
-  gap: 25px; /* 图片和文字之间的间距 */
+  margin-bottom: 40px; 
+  gap: 30px; /* 稍微增加间距，因为图片变大了 */
 }
 
-/* 左侧图片区域 */
+/* 左侧图片区域 - 修改点：宽度增加到 300px */
 .pub-img-col {
-  flex: 0 0 250px; /* 固定图片区域宽度，防止挤压 */
-  max-width: 250px;
+  flex: 0 0 300px; /* 宽度从 250px 改为 300px，高度会自动随之变大 */
+  max-width: 300px;
   position: relative;
 }
 
-/* 图片样式：圆角 + 阴影 + 悬停效果 */
+/* 图片样式 */
 .teaser-img {
   width: 100%;
-  height: auto;
-  border-radius: 8px; /* 圆角 */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 轻微阴影 */
+  height: auto; /* 高度自动，保持比例 */
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   transition: transform 0.2s ease;
   object-fit: cover;
 }
 
 .teaser-img:hover {
-  transform: scale(1.02); /* 鼠标悬停轻微放大 */
+  transform: scale(1.02);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* 徽章样式：右上角悬浮 */
+/* 徽章样式 - 修改点：背景改为紫色 */
 .conf-badge {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #525252; /* 深灰色背景，比纯黑更高级 */
+  background-color: #8e44ad; /* 修改这里：改为好看的紫色 */
   color: #fff;
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -46,7 +46,7 @@
 
 /* 右侧文字区域 */
 .pub-text-col {
-  flex: 1; /* 占据剩余空间 */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,16 +78,16 @@
   margin-top: 12px;
 }
 
-/* 透明按钮样式 (Ghost Button) */
+/* 透明按钮样式 */
 .btn-outline {
   display: inline-block;
   padding: 4px 12px;
   margin-right: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: #444; /* 字体深灰 */
+  color: #444; 
   background-color: transparent;
-  border: 1px solid #aaa; /* 细边框 */
+  border: 1px solid #aaa; 
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -95,7 +95,7 @@
 
 .btn-outline:hover {
   color: #fff;
-  background-color: #333; /* 悬停变黑 */
+  background-color: #333; 
   border-color: #333;
   text-decoration: none;
 }
