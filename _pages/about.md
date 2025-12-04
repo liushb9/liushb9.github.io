@@ -34,8 +34,18 @@ I am driven by a passion for exploration, the joy of creation, and the excitemen
 
 Publication📃
 ======
-- Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling (In Submission, 2025)
-- Decomposed Object Manipulation via Dual-Actor Policy (In Submission, 2025)
+
+**First Author/Co-First Author**
+- **Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling**  
+  Yueru Jia\*, Jiaming Liu\*, **Shengbang Liu**\*, Rui Zhou, Wanhe Yu, Yuyang Yan, Xiaowei Chi, Yandong Guo, Boxin Shi, Shanghang Zhang  
+  *arXiv Preprint, 2025.*  
+  [PDF](https://arxiv.org/pdf/2512.03044) | [Project Page](https://video2act.github.io/)
+
+**Co-Author**
+- **Decomposed Object Manipulation via Dual-Actor Policy**  
+  Bin Fan, Jianjian Jiang, Zhuohao Li, Yixiang He, Xiaoming Wu, Yihan Yang, **Shengbang Liu**, Weishi Zheng  
+  *arXiv Preprint, 2025.*  
+  [PDF](https://arxiv.org/abs/2511.05129)
 
 Education🎓
 ======

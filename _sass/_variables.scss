@@ -13,7 +13,7 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
 /* system typefaces */
-$serif                      : "Times New Roman", Times, serif;
+$serif                      : "Times New Roman", Times, "KaiTi", "楷体", serif;
 $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
@@ -23,14 +23,14 @@ $helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 /* serif typefaces */
 $georgia                    : Georgia, serif;
-$times                      : "Times New Roman", Times, serif;
+$times                      : "Times New Roman", Times, "KaiTi", "楷体", serif;
 $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
-$global-font-family         : "Times New Roman", Times, serif;
-$header-font-family         : "Times New Roman", Times, serif;
-$caption-font-family        : "Times New Roman", Times, serif;
+$global-font-family         : "Times New Roman", Times, "KaiTi", "楷体", serif;
+$header-font-family         : "Times New Roman", Times, "KaiTi", "楷体", serif;
+$caption-font-family        : "Times New Roman", Times, "KaiTi", "楷体", serif;
 
 /* type scale */
 $type-size-1                : 2.441em;  // ~39.056px
