@@ -9,8 +9,8 @@
 
 /* 左侧图片区域 - 修改点：宽度增加到 350px */
 .pub-img-col {
-  flex: 0 0 350px; /* 宽度从 250px 改为 350px，高度会自动随之变大 */
-  max-width: 350px;
+  flex: 0 0 250px; /* 宽度从 250px 改为 350px，高度会自动随之变大 */
+  max-width: 250px;
   position: relative;
 }
 
