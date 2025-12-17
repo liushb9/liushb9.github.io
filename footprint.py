@@ -19,7 +19,12 @@ cities_data = [
     ("Hong Kong", 114.1694, 22.3193),
     ("Dali", 100.2676, 25.6065),
     ("Kunming", 102.8329, 24.8801),
-    ("Lijiang", 100.2300, 26.8700)
+    ("Lijiang", 100.2300, 26.8700),
+    ("Wuzhou", 111.2792, 23.4851),
+    ("Hezhou", 111.5665, 24.4141),
+    ("Guilin", 110.2992, 25.2742),
+    ("Foshan", 113.1224, 23.0288),
+    ("Chengdu", 104.0668, 30.5728)
 ]
 
 # 2. 确保保存图片的目录存在
@@ -49,24 +54,11 @@ ax.add_feature(cfeature.COASTLINE.with_scale('110m'), linewidth=0.5, edgecolor='
 ax.add_feature(cfeature.BORDERS.with_scale('110m'), linestyle='-', edgecolor='white', linewidth=0.5)
 
 # 5. 绘制城市标记点（亮金色）
-# 北京和广州使用星星标记，其他城市使用小圆点
 gold_color = '#FFD700'
 for city, lon, lat in cities_data:
-    if city in ['Beijing', 'Guangzhou']:
-        # 北京和广州使用星星标记，更大一点
-        ax.plot(lon, lat, '*', color=gold_color, markersize=8, 
-                transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
-        # 添加文本标签（带文本框）
-        ax.text(lon, lat + 2, city, transform=ccrs.PlateCarree(), 
-                fontsize=8, color='black', weight='bold',
-                fontfamily='serif',
-                bbox=dict(boxstyle='round,pad=0.3', facecolor='white', 
-                         edgecolor='gray', alpha=0.8, linewidth=0.5),
-                ha='center', va='bottom', zorder=6)
-    else:
-        # 其他城市使用小圆点
-        ax.plot(lon, lat, 'o', color=gold_color, markersize=3, 
-                transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
+    # 所有城市使用小圆点
+    ax.plot(lon, lat, 'o', color=gold_color, markersize=3, 
+            transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
 
 # 6. 移除坐标轴边框
 ax.spines['geo'].set_visible(False)

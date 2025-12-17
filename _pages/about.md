@@ -28,7 +28,7 @@ About me🧑‍🚀
 ======
 Hi there! 👋 I'm Shengbang Liu, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/). Currently, I am a research intern at [Human Machine Intelligence Lab (HMI)](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). I am also privileged to be mentored by Prof. [Weishi Zheng](https://isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home) during my undergraduate studies.
 
-My research interests primarily focus on **Robotic Manipulation** 🤖, with the goal of developing generalizable, versatile, and robust robot agents. I am also exploring **Reinforcement Learning** 🍭 and **Multimodal Large Models** 🧠.
+My research interests primarily focus on **Robotic Manipulation** 🤖, with the goal of developing generalizable, versatile, and robust robot agents. I am also exploring **Reinforcement Learning** 🍭, **tactile sensing** 🖐 and **Multimodal Large Models** 🧠.
 
 I am driven by a passion for exploration, the joy of creation, and the excitement of what comes next! 🤩
 
@@ -46,8 +46,6 @@ Selected Awards and Honors🏆
 ======
 - **National Scholarship**, 2025, 2024
 - First Class Academic Scholarship, 2025, 2024
-- First Prize in the CSP-J/S, 2019
-- First Prize in the National Olympiad in Informatics in Provinces, 2018
 
 Personality🥳
 ======
