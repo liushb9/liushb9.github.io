@@ -24,7 +24,13 @@ cities_data = [
     ("Hezhou", 111.5665, 24.4141),
     ("Guilin", 110.2992, 25.2742),
     ("Foshan", 113.1224, 23.0288),
-    ("Chengdu", 104.0668, 30.5728)
+    ("Chengdu", 104.0668, 30.5728),
+    ("Shanghai", 121.4737, 31.2304),
+    ("Nanjing", 118.7969, 32.0603),
+    ("Tai'an", 117.1291, 36.1949),
+    ("Jinan", 117.1201, 36.6512),
+    ("Lianjiang", 110.2844, 21.6118),
+    ("Shantou", 116.6822, 23.3541)
 ]
 
 # 2. 确保保存图片的目录存在
@@ -57,7 +63,7 @@ ax.add_feature(cfeature.BORDERS.with_scale('110m'), linestyle='-', edgecolor='wh
 gold_color = '#FFD700'
 for city, lon, lat in cities_data:
     # 所有城市使用小圆点
-    ax.plot(lon, lat, 'o', color=gold_color, markersize=3, 
+    ax.plot(lon, lat, 'o', color=gold_color, markersize=2, 
             transform=ccrs.PlateCarree(), zorder=5, markeredgewidth=0)
 
 # 6. 移除坐标轴边框
