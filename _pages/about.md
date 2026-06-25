@@ -24,13 +24,11 @@ redirect_from:
 }
 </style>
 
-About me🧑‍🚀
+About Me🧑‍🚀
 ======
-Hi there! 👋 I'm Shengbang Liu, an undergraduate student in the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/) at [Sun Yat-sen University](https://www.sysu.edu.cn/). Currently, I am a research intern at [Human Machine Intelligence Lab (HMI)](https://pku-hmi-lab.github.io/HMI-Web/research.html) and Simple Robots, supervised by Prof. [Shanghang Zhang](https://www.shanghangzhang.com/). I am also privileged to be mentored by Prof. [Weishi Zheng](https://isee-ai.cn/~zhwshi/) in the [Intelligence Science and System Lab (iSEE)](https://isee-ai.cn/#/home) during my undergraduate studies.
+I'm Shengbang Liu, currently an undergraduate student at the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/), Sun Yat-sen University. I will join the [EDI Lab](https://thusigs-edi-lab.github.io/) at Tsinghua University as a PhD student, supervised by Prof. [Chao Yu](https://zoeyuchao.github.io/) and Prof. [Yu Wang](https://nicsefc.ee.tsinghua.edu.cn/people/YuWang). Previously, I was fortunate to work as a research intern at the [Human Machine Intelligence Lab (HMI)](https://pku-hmi-lab.github.io/HMI-Web/research.html), under the supervision of Prof. [Shanghang Zhang](https://www.shanghangzhang.com/).
 
-My research interests primarily focus on **Robotic Manipulation** 🤖, with the goal of developing generalizable, versatile, and robust robot agents. I am also exploring **Reinforcement Learning** 🍭, **tactile sensing** 🖐 and **Multimodal Large Models** 🧠.
-
-I am driven by a passion for exploration, the joy of creation, and the excitement of what comes next! 🤩
+My research interests primarily focus on **Robotic Manipulation** 🤖 and **Reinforcement Learning** 🍭. My long-term goal is to build general-purpose robot agents that can understand, interact with, and create meaningful value in the physical world, paving the way toward Physical AGI.
 
 Publications📃
 ======
