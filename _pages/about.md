@@ -26,7 +26,7 @@ redirect_from:
 
 About Me🧑‍🚀
 ======
-I'm Shengbang Liu, currently an undergraduate student at the School of [Computer Science and Engineering, Sun Yat-sen University](https://cse.sysu.edu.cn/). I will join the [Embodied Decision Intelligence Lab(EDI Lab) at Tsinghua University](https://thusigs-edi-lab.github.io/) as a PhD student, supervised by Prof. [Chao Yu](https://zoeyuchao.github.io/) and Prof. [Yu Wang](https://nicsefc.ee.tsinghua.edu.cn/people/YuWang). Previously, I was fortunate to work as a research intern at the [Human Machine Intelligence Lab(HMI Lab)](https://pku-hmi-lab.github.io/HMI-Web/research.html), under the supervision of Prof. [Shanghang Zhang](https://www.shanghangzhang.com/).
+I'm Shengbang Liu, currently an undergraduate student at the School of Computer Science and Engineering, Sun Yat-sen University. I will join the [Embodied Decision Intelligence Lab(EDI Lab)](https://thusigs-edi-lab.github.io/) at Tsinghua University as a PhD student, supervised by Prof. [Chao Yu](https://zoeyuchao.github.io/) and Prof. [Yu Wang](https://nicsefc.ee.tsinghua.edu.cn/people/YuWang). Previously, I was fortunate to work as a research intern at the [Human Machine Intelligence Lab(HMI Lab)](https://pku-hmi-lab.github.io/HMI-Web/research.html), under the supervision of Prof. [Shanghang Zhang](https://www.shanghangzhang.com/).
 
 My research interests primarily focus on **Robotic Manipulation** 🤖 and **Reinforcement Learning** 🍭. My long-term goal is to build general-purpose robot agents that can understand, interact with, and create meaningful value in the physical world, paving the way toward Physical AGI.
 
@@ -47,11 +47,11 @@ Selected Awards and Honors🏆
 
 Personality🥳
 ======
-Beyond academics and research, I embrace the vivid rhythm of life through basketball 🏀, photography 📸, reading 📚, and comedy 🤣, among others. To me, life is a continuous loop of debugging and discovering. Driven by an insatiable curiosity, I'm always eager to explore this vast world 🌍 and can't wait to share adventures and stories with you!
+Beyond academics and research, I enjoy fitness 🏋️, podcasts 🎙️, reading 📚, and comedy 🤣. To me, life is a continuous process of debugging, discovering, and growing. Driven by curiosity, I am always eager to explore the world 🌍 and experience new things—and I can't wait to share adventures and stories with you!
 
 Contact Me💬
 ======
-Firmly believing that open discussions and debates drive innovation in academia, I welcome your thoughts, fresh ideas, and even disagreements regarding my work. Grateful for the support I’ve received along my journey, I am equally dedicated to assisting others. Beyond research, connecting on a broader level is always exciting to me, so feel free to reach out to discuss business ventures, life experiences, or our wildest dreams.
+If you are interested in joining the [Embodied Decision Intelligence Lab(EDI Lab)](https://thusigs-edi-lab.github.io/) as a **research assistant**, please feel free to reach out to me directly via [email](mailto:liushengbang0209@gmail.com). In your message, please briefly introduce yourself and share your research interests and relevant experience.
 
 <div style="width: 100%; max-width: 100%; margin-top: 2em; overflow: hidden;">
   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=JHwSe0hpWslgMZ3XDNF2Scw8_vYLRfXvMykkTfRYY48&cl=ffffff&w=a"></script>
