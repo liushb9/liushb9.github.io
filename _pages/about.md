@@ -26,7 +26,7 @@ redirect_from:
 
 About Me🧑‍🚀
 ======
-I'm Shengbang Liu, currently an undergraduate student at the School of [Computer Science and Engineering](https://cse.sysu.edu.cn/), Sun Yat-sen University. I will join the [EDI Lab](https://thusigs-edi-lab.github.io/) at Tsinghua University as a PhD student, supervised by Prof. [Chao Yu](https://zoeyuchao.github.io/) and Prof. [Yu Wang](https://nicsefc.ee.tsinghua.edu.cn/people/YuWang). Previously, I was fortunate to work as a research intern at the [Human Machine Intelligence Lab (HMI)](https://pku-hmi-lab.github.io/HMI-Web/research.html), under the supervision of Prof. [Shanghang Zhang](https://www.shanghangzhang.com/).
+I'm Shengbang Liu, currently an undergraduate student at the School of [Computer Science and Engineering, Sun Yat-sen University](https://cse.sysu.edu.cn/). I will join the [Embodied Decision Intelligence Lab(EDI Lab) at Tsinghua University](https://thusigs-edi-lab.github.io/) as a PhD student, supervised by Prof. [Chao Yu](https://zoeyuchao.github.io/) and Prof. [Yu Wang](https://nicsefc.ee.tsinghua.edu.cn/people/YuWang). Previously, I was fortunate to work as a research intern at the [Human Machine Intelligence Lab(HMI Lab)](https://pku-hmi-lab.github.io/HMI-Web/research.html), under the supervision of Prof. [Shanghang Zhang](https://www.shanghangzhang.com/).
 
 My research interests primarily focus on **Robotic Manipulation** 🤖 and **Reinforcement Learning** 🍭. My long-term goal is to build general-purpose robot agents that can understand, interact with, and create meaningful value in the physical world, paving the way toward Physical AGI.
 
