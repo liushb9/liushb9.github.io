@@ -51,7 +51,7 @@ Beyond academics and research, I enjoy fitness 🏋️, podcasts 🎙️, readin
 
 Contact Me💬
 ======
-If you are interested in joining the [Embodied Decision Intelligence Lab(EDI Lab)](https://thusigs-edi-lab.github.io/) as a **research assistant**, please feel free to reach out to me directly via [email](mailto:liushengbang0209@gmail.com). In your message, please briefly introduce yourself and share your research interests and relevant experience.
+If you are interested in joining the [Embodied Decision Intelligence Lab(EDI Lab)](https://thusigs-edi-lab.github.io/) as a **research assistant**, please feel free to reach out to me directly via [edi_hire@163.com](mailto:edi_hire@163.com). In your message, please briefly introduce yourself and share your research interests and relevant experience.
 
 <div style="width: 100%; max-width: 100%; margin-top: 2em; overflow: hidden;">
   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=JHwSe0hpWslgMZ3XDNF2Scw8_vYLRfXvMykkTfRYY48&cl=ffffff&w=a"></script>

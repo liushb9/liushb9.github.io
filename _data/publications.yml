@@ -3,8 +3,8 @@ main:
     authors: "<strong>Shengbang Liu*</strong>, Yueru Jia*, Yuyang Yan*, Jiaming Liu*, Xinran Zhang, Qiuxuan Feng, Yandong Guo, Shiji Zhou, Boxin Shi, Shanghang Zhang"
     conference_short: "arXiv 2026"
     conference: "arXiv Preprint, 2026."
-    pdf: "https://arxiv.org/pdf/2512.03044"
-    page: "https://video2act.github.io/"
+    pdf: "https://arxiv.org/pdf/2607.02840"
+    page: "https://taco-wm.github.io/"
     code: "https://github.com/liushb9/TACO"
     image: "./images/TACO.png"
 
