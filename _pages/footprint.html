@@ -20,12 +20,17 @@ author_profile: false
     margin: 0 auto;
     padding: 2.5rem 1.25rem 4rem;
     color: var(--fp-text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Times New Roman", Times, serif;
   }
 
   .footprint-page *,
   .footprint-page *::before,
   .footprint-page *::after { box-sizing: border-box; }
+
+  .footprint-page button,
+  .footprint-page input,
+  .footprint-page .leaflet-container,
+  .footprint-page .leaflet-container * { font-family: inherit; }
 
   .footprint-header {
     display: flex;
@@ -233,6 +238,25 @@ author_profile: false
   .footprint-places { margin-top: 3rem; }
   .footprint-places-heading > span { color: var(--fp-muted); font-size: 0.76rem; }
 
+  .footprint-year-group { margin-top: 2rem; }
+  .footprint-year-group:first-child { margin-top: 1rem; }
+  .footprint-year-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+    color: var(--fp-text);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .footprint-year-heading::after {
+    height: 1px;
+    flex: 1;
+    background: var(--fp-border);
+    content: "";
+  }
+
   .footprint-place-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -393,7 +417,7 @@ author_profile: false
       <div><p class="footprint-kicker">City index</p><h2 id="footprint-places-heading">All visited places</h2></div>
       <span id="footprint-marker-count">26 markers</span>
     </div>
-    <div id="footprint-place-grid" class="footprint-place-grid"></div>
+    <div id="footprint-place-grid"></div>
   </section>
 </main>
 
@@ -401,33 +425,33 @@ author_profile: false
 <script>
   (() => {
     const places = [
-      ["Beijing", 116.4074, 39.9042],
-      ["Guangzhou", 113.2644, 23.1291],
-      ["Zhongshan", 113.3928, 22.5170],
-      ["Heyuan", 114.7003, 23.7443],
-      ["Baoding", 115.4648, 38.8744],
-      ["Zhaoqing", 112.4651, 23.0472],
-      ["Dongguan", 113.7518, 23.0207],
-      ["Zhanjiang", 110.3594, 21.2713],
-      ["Zhuhai", 113.5767, 22.2707],
-      ["Shenzhen", 114.0579, 22.5431],
-      ["Yulin", 110.1613, 22.6368],
-      ["Hong Kong", 114.1694, 22.3193],
-      ["Dali", 100.2676, 25.6065],
-      ["Kunming", 102.8329, 24.8801],
-      ["Lijiang", 100.2300, 26.8700],
-      ["Wuzhou", 111.2792, 23.4851],
-      ["Hezhou", 111.5665, 24.4141],
-      ["Guilin", 110.2992, 25.2742],
-      ["Foshan", 113.1224, 23.0288],
-      ["Chengdu", 104.0668, 30.5728],
-      ["Shanghai", 121.4737, 31.2304],
-      ["Nanjing", 118.7969, 32.0603],
-      ["Tai'an", 117.1291, 36.1949],
-      ["Jinan", 117.1201, 36.6512],
-      ["Lianjiang", 110.2844, 21.6118],
-      ["Shantou", 116.6822, 23.3541]
-    ].map(([name, lng, lat]) => ({ name, lng, lat, country: "China" }));
+      ["Beijing", 116.4074, 39.9042, "Earlier"],
+      ["Guangzhou", 113.2644, 23.1291, "Earlier"],
+      ["Zhongshan", 113.3928, 22.5170, "Earlier"],
+      ["Heyuan", 114.7003, 23.7443, "Earlier"],
+      ["Baoding", 115.4648, 38.8744, "2025"],
+      ["Zhaoqing", 112.4651, 23.0472, "2025"],
+      ["Dongguan", 113.7518, 23.0207, "Earlier"],
+      ["Zhanjiang", 110.3594, 21.2713, "Earlier"],
+      ["Zhuhai", 113.5767, 22.2707, "Earlier"],
+      ["Shenzhen", 114.0579, 22.5431, "Earlier"],
+      ["Yulin", 110.1613, 22.6368, "Earlier"],
+      ["Hong Kong", 114.1694, 22.3193, "Earlier"],
+      ["Dali", 100.2676, 25.6065, "2023"],
+      ["Kunming", 102.8329, 24.8801, "2023"],
+      ["Lijiang", 100.2300, 26.8700, "2023"],
+      ["Wuzhou", 111.2792, 23.4851, "Earlier"],
+      ["Hezhou", 111.5665, 24.4141, "Earlier"],
+      ["Guilin", 110.2992, 25.2742, "Earlier"],
+      ["Foshan", 113.1224, 23.0288, "Earlier"],
+      ["Chengdu", 104.0668, 30.5728, "2025"],
+      ["Shanghai", 121.4737, 31.2304, "2026"],
+      ["Nanjing", 118.7969, 32.0603, "2026"],
+      ["Taian", 117.1291, 36.1949, "2026"],
+      ["Jinan", 117.1201, 36.6512, "2026"],
+      ["Lianjiang", 110.2844, 21.6118, "Earlier"],
+      ["Shantou", 116.6822, 23.3541, "2026"]
+    ].map(([name, lng, lat, year]) => ({ name, lng, lat, year, country: "China" }));
 
     const mapElement = document.getElementById('footprint-map');
     const fallbackElement = document.getElementById('footprint-map-fallback');
@@ -452,19 +476,43 @@ author_profile: false
       selectedCountry.textContent = place.country;
       selectedLat.textContent = `${place.lat.toFixed(4)}°`;
       selectedLng.textContent = `${place.lng.toFixed(4)}°`;
-      document.querySelectorAll('.footprint-place-card').forEach((card, cardIndex) => card.classList.toggle('is-active', cardIndex === index));
+      document.querySelectorAll('.footprint-place-card').forEach(card => card.classList.toggle('is-active', Number(card.dataset.placeIndex) === index));
       if (moveMap && map) map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 7), { duration: 0.7 });
       if (markers[index]) markers[index].openPopup();
     }
 
-    places.forEach((place, index) => {
-      const card = document.createElement('button');
-      card.type = 'button';
-      card.className = 'footprint-place-card';
-      card.setAttribute('aria-label', `Show ${place.name}, China on the map`);
-      card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true"></span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
-      card.addEventListener('click', () => updateSelection(index, true));
-      gridElement.appendChild(card);
+    const yearOrder = ['2026', '2025', '2023', 'Earlier'];
+    const cityOrder = {
+      '2026': ['Shanghai', 'Nanjing', 'Taian', 'Jinan', 'Shantou'],
+      '2025': ['Zhaoqing', 'Baoding', 'Chengdu'],
+      '2023': ['Kunming', 'Lijiang', 'Dali']
+    };
+    const yearGroups = new Map(yearOrder.map(year => [year, []]));
+    places.forEach((place, index) => yearGroups.get(place.year).push({ place, index }));
+
+    yearGroups.forEach((groupPlaces, year) => {
+      if (cityOrder[year]) {
+        groupPlaces.sort((left, right) => cityOrder[year].indexOf(left.place.name) - cityOrder[year].indexOf(right.place.name));
+      }
+      const groupElement = document.createElement('section');
+      groupElement.className = 'footprint-year-group';
+      groupElement.setAttribute('aria-labelledby', `footprint-year-${year.toLowerCase()}`);
+      groupElement.innerHTML = `<h3 id="footprint-year-${year.toLowerCase()}" class="footprint-year-heading">${year}</h3>`;
+
+      const yearGrid = document.createElement('div');
+      yearGrid.className = 'footprint-place-grid';
+      groupPlaces.forEach(({ place, index }) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'footprint-place-card';
+        card.dataset.placeIndex = index;
+        card.setAttribute('aria-label', `Show ${place.name}, China on the map`);
+        card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true"></span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
+        card.addEventListener('click', () => updateSelection(index, true));
+        yearGrid.appendChild(card);
+      });
+      groupElement.appendChild(yearGrid);
+      gridElement.appendChild(groupElement);
     });
 
     if (typeof L === 'undefined') {
