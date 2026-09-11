@@ -1,14 +1,494 @@
 ---
-layout: archive
-title: "Footprint &#128099;"
+layout: default
+title: "Footprint"
 permalink: /footprint/
-author_profile: true
+author_profile: false
 ---
 
-{% include base_path %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 
-<!-- <div style="margin-bottom: 30px; background-color: white; border: 1px solid white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <h2 style="margin-top: 0; margin-bottom: 20px; text-align: left;">&#9658; Bayesian inversion based on the invertible neural network (INN)</h2> -->
-  <img src="/images/world_map.png" style="max-width: 100%; height: auto; border-radius: 5px;">
-<!-- </div> -->
+<style>
+  .footprint-page {
+    --fp-bg: #f8fafb;
+    --fp-card: #ffffff;
+    --fp-text: #111827;
+    --fp-muted: #667085;
+    --fp-border: rgba(15, 23, 42, 0.12);
+    --fp-accent: #ef4444;
+    --fp-shadow: 0 24px 65px -48px rgba(15, 23, 42, 0.55);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    color: var(--fp-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
 
+  .footprint-page *,
+  .footprint-page *::before,
+  .footprint-page *::after { box-sizing: border-box; }
+
+  .footprint-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem auto 2.5rem;
+    text-align: center;
+  }
+
+  .footprint-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--fp-muted);
+    font-size: 0.78rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footprint-back:hover { color: var(--fp-text); }
+  .footprint-back svg { width: 0.85rem; height: 0.85rem; }
+
+  .footprint-eyebrow,
+  .footprint-kicker {
+    margin: 0;
+    color: var(--fp-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .footprint-header h1 {
+    margin: 0;
+    font-size: clamp(2.25rem, 5vw, 3.65rem);
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    line-height: 1.05;
+  }
+
+  .footprint-header > p:last-child {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--fp-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .footprint-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footprint-stat {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-height: 6.15rem;
+    border: 1px solid var(--fp-border);
+    border-radius: 1rem;
+    background: var(--fp-card);
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .footprint-stat strong {
+    font-size: clamp(1.55rem, 4vw, 2.05rem);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .footprint-stat span {
+    color: var(--fp-muted);
+    font-size: 0.74rem;
+  }
+
+  .footprint-shell {
+    overflow: hidden;
+    border: 1px solid var(--fp-border);
+    border-radius: 1.25rem;
+    background: var(--fp-card);
+    box-shadow: var(--fp-shadow);
+  }
+
+  .footprint-shell-heading,
+  .footprint-places-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footprint-shell-heading {
+    padding: 1.25rem 1.35rem;
+    border-bottom: 1px solid var(--fp-border);
+  }
+
+  .footprint-shell-heading h2,
+  .footprint-places-heading h2 {
+    margin: 0.25rem 0 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .footprint-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid var(--fp-border);
+    border-radius: 0.65rem;
+    background: transparent;
+    color: var(--fp-text);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+    padding: 0.52rem 0.75rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .footprint-reset:hover { border-color: var(--fp-accent); background: rgba(239, 68, 68, 0.06); }
+  .footprint-reset svg { width: 0.95rem; height: 0.95rem; }
+
+  .footprint-map-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.85fr) minmax(17rem, 0.8fr);
+  }
+
+  .footprint-map-frame {
+    position: relative;
+    min-width: 0;
+    min-height: 33rem;
+    background: #dfe9ed;
+  }
+
+  #footprint-map {
+    width: 100%;
+    height: 33rem;
+    z-index: 1;
+  }
+
+  .footprint-map-frame .leaflet-control-zoom {
+    margin: 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.14);
+    border-radius: 0.65rem;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1);
+  }
+
+  .footprint-map-frame .leaflet-control-zoom a {
+    width: 2rem;
+    height: 2rem;
+    color: #1f2937;
+    line-height: 2rem;
+  }
+
+  .footprint-focus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    min-width: 0;
+    border-left: 1px solid var(--fp-border);
+    background: radial-gradient(circle at 100% 0%, rgba(239, 68, 68, 0.12), transparent 43%), var(--fp-card);
+    padding: 1.5rem;
+  }
+
+  .footprint-pin {
+    display: grid;
+    width: 3.2rem;
+    height: 3.2rem;
+    place-items: center;
+    border-radius: 1rem;
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+  }
+
+  .footprint-pin svg { width: 1.65rem; height: 1.65rem; }
+  .footprint-focus h3 { margin: 0; font-size: 1.65rem; letter-spacing: -0.045em; }
+  .footprint-focus-country { margin: 0.2rem 0 0; color: var(--fp-muted); font-size: 0.88rem; }
+
+  .footprint-coordinates {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin: 0.2rem 0 0;
+  }
+
+  .footprint-coordinates div {
+    border: 1px solid var(--fp-border);
+    border-radius: 0.7rem;
+    padding: 0.7rem;
+  }
+
+  .footprint-coordinates dt { color: var(--fp-muted); font-size: 0.66rem; }
+  .footprint-coordinates dd { margin: 0.2rem 0 0; font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+  .footprint-focus-note { margin: 0; color: var(--fp-muted); font-size: 0.72rem; line-height: 1.55; }
+
+  .footprint-places { margin-top: 3rem; }
+  .footprint-places-heading > span { color: var(--fp-muted); font-size: 0.76rem; }
+
+  .footprint-place-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .footprint-place-card {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 0.65rem;
+    border: 1px solid var(--fp-border);
+    border-radius: 0.8rem;
+    background: var(--fp-card);
+    color: var(--fp-text);
+    cursor: pointer;
+    padding: 0.75rem 0.8rem;
+    text-align: left;
+    transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+  }
+
+  .footprint-place-card:hover,
+  .footprint-place-card.is-active { border-color: rgba(239, 68, 68, 0.45); background: rgba(239, 68, 68, 0.055); }
+  .footprint-place-card:hover { transform: translateY(-1px); }
+
+  .footprint-place-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    flex: none;
+    border: 2px solid var(--fp-card);
+    border-radius: 50%;
+    background: var(--fp-accent);
+    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.35);
+  }
+
+  .footprint-place-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; }
+  .footprint-place-copy strong { overflow: hidden; font-size: 0.8rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+  .footprint-place-copy small { color: var(--fp-muted); font-size: 0.66rem; }
+  .footprint-place-card > svg { width: 0.9rem; height: 0.9rem; flex: none; color: var(--fp-muted); }
+
+  .footprint-marker {
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid #fff;
+    border-radius: 50% 50% 50% 0;
+    background: var(--fp-accent);
+    box-shadow: 0 3px 10px rgba(127, 29, 29, 0.35);
+    transform: rotate(-45deg);
+  }
+
+  .footprint-marker::after {
+    display: block;
+    width: 0.22rem;
+    height: 0.22rem;
+    margin: 0.22rem auto;
+    border-radius: 50%;
+    background: #fff;
+    content: "";
+  }
+
+  .footprint-map-fallback {
+    display: none;
+    position: absolute;
+    inset: 1rem;
+    z-index: 2;
+    place-items: center;
+    border: 1px dashed rgba(15, 23, 42, 0.25);
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.88);
+    color: #475467;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .leaflet-popup-content-wrapper,
+  .leaflet-popup-tip { background: var(--fp-card); color: var(--fp-text); }
+  .leaflet-popup-content { margin: 0.75rem 0.9rem; font-family: inherit; }
+
+  @media (max-width: 900px) {
+    .footprint-map-layout { grid-template-columns: 1fr; }
+    .footprint-focus { border-top: 1px solid var(--fp-border); border-left: 0; }
+  }
+
+  @media (max-width: 680px) {
+    .footprint-page { padding: 1.5rem 0.75rem 3rem; }
+    .footprint-header { margin-top: 0.5rem; margin-bottom: 2rem; }
+    .footprint-stats { gap: 0.45rem; }
+    .footprint-stat { min-height: 5.3rem; padding: 0.75rem 0.2rem; }
+    .footprint-stat span { font-size: 0.65rem; }
+    .footprint-shell-heading { padding: 1rem; }
+    .footprint-shell-heading h2, .footprint-places-heading h2 { font-size: 1.1rem; }
+    .footprint-map-frame, #footprint-map { min-height: 24rem; height: 24rem; }
+    .footprint-place-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footprint-place-card { padding: 0.7rem; }
+  }
+
+  @media (max-width: 430px) {
+    .footprint-place-grid { grid-template-columns: 1fr; }
+    .footprint-shell-heading { align-items: flex-start; }
+    .footprint-reset { padding: 0.48rem 0.6rem; }
+  }
+</style>
+
+<main class="footprint-page" aria-labelledby="footprint-title">
+  <header class="footprint-header">
+    <a class="footprint-back" href="{{ '/' | relative_url }}" aria-label="Back to home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19 8 12l7-7"></path></svg>
+      Home
+    </a>
+    <p class="footprint-eyebrow">Travel atlas</p>
+    <h1 id="footprint-title">Places I Have Been</h1>
+    <p>A map of the cities I have explored. Select a marker or a city below to take a closer look.</p>
+  </header>
+
+  <section class="footprint-stats" aria-label="Travel statistics">
+    <article class="footprint-stat"><strong id="footprint-city-count">26</strong><span>Cities</span></article>
+    <article class="footprint-stat"><strong>1</strong><span>Countries</span></article>
+    <article class="footprint-stat"><strong>0</strong><span>Geocoding calls</span></article>
+  </section>
+
+  <section class="footprint-shell" aria-labelledby="footprint-map-heading">
+    <div class="footprint-shell-heading">
+      <div>
+        <p class="footprint-kicker">Interactive map</p>
+        <h2 id="footprint-map-heading">Explore the journey</h2>
+      </div>
+      <button id="footprint-reset" class="footprint-reset" type="button" aria-label="Show all visited places">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12a9 9 0 1 0 1.64-5.18M3 4v4h4"></path></svg>
+        Show all
+      </button>
+    </div>
+    <div class="footprint-map-layout">
+      <div class="footprint-map-frame">
+        <div id="footprint-map" role="application" aria-label="Interactive map of visited cities"></div>
+        <div id="footprint-map-fallback" class="footprint-map-fallback">The base map is temporarily unavailable.<br>City coordinates and the place index are still available.</div>
+      </div>
+      <aside class="footprint-focus" aria-live="polite">
+        <span class="footprint-kicker">Selected place</span>
+        <div class="footprint-pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5" stroke-width="1.8"></circle></svg>
+        </div>
+        <div>
+          <h3 id="footprint-selected-name">Beijing</h3>
+          <p id="footprint-selected-country" class="footprint-focus-country">China</p>
+        </div>
+        <dl class="footprint-coordinates">
+          <div><dt>Latitude</dt><dd id="footprint-selected-lat">39.9042°</dd></div>
+          <div><dt>Longitude</dt><dd id="footprint-selected-lng">116.4074°</dd></div>
+        </dl>
+        <p class="footprint-focus-note">Coordinates are stored with the site, so this marker will not move when a third-party geocoder changes.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="footprint-places" aria-labelledby="footprint-places-heading">
+    <div class="footprint-places-heading">
+      <div><p class="footprint-kicker">City index</p><h2 id="footprint-places-heading">All visited places</h2></div>
+      <span id="footprint-marker-count">26 markers</span>
+    </div>
+    <div id="footprint-place-grid" class="footprint-place-grid"></div>
+  </section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  (() => {
+    const places = [
+      ["Beijing", 116.4074, 39.9042],
+      ["Guangzhou", 113.2644, 23.1291],
+      ["Zhongshan", 113.3928, 22.5170],
+      ["Heyuan", 114.7003, 23.7443],
+      ["Baoding", 115.4648, 38.8744],
+      ["Zhaoqing", 112.4651, 23.0472],
+      ["Dongguan", 113.7518, 23.0207],
+      ["Zhanjiang", 110.3594, 21.2713],
+      ["Zhuhai", 113.5767, 22.2707],
+      ["Shenzhen", 114.0579, 22.5431],
+      ["Yulin", 110.1613, 22.6368],
+      ["Hong Kong", 114.1694, 22.3193],
+      ["Dali", 100.2676, 25.6065],
+      ["Kunming", 102.8329, 24.8801],
+      ["Lijiang", 100.2300, 26.8700],
+      ["Wuzhou", 111.2792, 23.4851],
+      ["Hezhou", 111.5665, 24.4141],
+      ["Guilin", 110.2992, 25.2742],
+      ["Foshan", 113.1224, 23.0288],
+      ["Chengdu", 104.0668, 30.5728],
+      ["Shanghai", 121.4737, 31.2304],
+      ["Nanjing", 118.7969, 32.0603],
+      ["Tai'an", 117.1291, 36.1949],
+      ["Jinan", 117.1201, 36.6512],
+      ["Lianjiang", 110.2844, 21.6118],
+      ["Shantou", 116.6822, 23.3541]
+    ].map(([name, lng, lat]) => ({ name, lng, lat, country: "China" }));
+
+    const mapElement = document.getElementById('footprint-map');
+    const fallbackElement = document.getElementById('footprint-map-fallback');
+    const gridElement = document.getElementById('footprint-place-grid');
+    const markerCountElement = document.getElementById('footprint-marker-count');
+    const selectedName = document.getElementById('footprint-selected-name');
+    const selectedCountry = document.getElementById('footprint-selected-country');
+    const selectedLat = document.getElementById('footprint-selected-lat');
+    const selectedLng = document.getElementById('footprint-selected-lng');
+    const resetButton = document.getElementById('footprint-reset');
+    const markerIcon = L.divIcon({ className: '', html: '<div class="footprint-marker"></div>', iconSize: [16, 16], iconAnchor: [8, 16], popupAnchor: [0, -16] });
+    const markers = [];
+    const cityBounds = L.latLngBounds(places.map(place => [place.lat, place.lng]));
+    let map;
+
+    markerCountElement.textContent = `${places.length} markers`;
+    document.getElementById('footprint-city-count').textContent = places.length;
+
+    function updateSelection(index, moveMap) {
+      const place = places[index];
+      selectedName.textContent = place.name;
+      selectedCountry.textContent = place.country;
+      selectedLat.textContent = `${place.lat.toFixed(4)}°`;
+      selectedLng.textContent = `${place.lng.toFixed(4)}°`;
+      document.querySelectorAll('.footprint-place-card').forEach((card, cardIndex) => card.classList.toggle('is-active', cardIndex === index));
+      if (moveMap && map) map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 7), { duration: 0.7 });
+      if (markers[index]) markers[index].openPopup();
+    }
+
+    places.forEach((place, index) => {
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'footprint-place-card';
+      card.setAttribute('aria-label', `Show ${place.name}, China on the map`);
+      card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true"></span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
+      card.addEventListener('click', () => updateSelection(index, true));
+      gridElement.appendChild(card);
+    });
+
+    if (typeof L === 'undefined') {
+      fallbackElement.style.display = 'grid';
+      return;
+    }
+
+    map = L.map(mapElement, { zoomControl: true, scrollWheelZoom: true, worldCopyJump: true });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+
+    places.forEach((place, index) => {
+      const marker = L.marker([place.lat, place.lng], { icon: markerIcon, title: place.name }).addTo(map);
+      marker.bindPopup(`<strong>${place.name}</strong><br><span style="color:#667085">China</span>`);
+      marker.on('click', () => updateSelection(index, false));
+      markers.push(marker);
+    });
+
+    function showAll() {
+      map.fitBounds(cityBounds, { padding: [30, 30], maxZoom: 7 });
+      updateSelection(0, false);
+    }
+
+    resetButton.addEventListener('click', showAll);
+    showAll();
+    window.addEventListener('resize', () => map.invalidateSize());
+  })();
+</script>
