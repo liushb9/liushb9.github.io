@@ -37,6 +37,7 @@ Publications📃
 
 Education🎓
 ======
+- <img src="images/THU.jpg" alt="THU Logo" style="height: 1.2em; vertical-align: middle;"> PhD in Information and Communication Engineering, Tsinghua University (Incoming, 2027.9)
 - <img src="images/sysu.jpg" alt="SYSU Logo" style="height: 1.2em; vertical-align: middle;"> Bachelor's in Computer Science and Technology, Sun Yat-sen University (2023.9–Present)
 - <img src="images/jz.jpg" alt="JZ Logo" style="height: 1.2em; vertical-align: middle;"> Sun Yat-sen Memorial Middle School (2017.9–2023.6)
 
