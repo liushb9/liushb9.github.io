@@ -4,6 +4,7 @@ main:
     conference_short: "arXiv 2026"
     conference: "arXiv Preprint, 2026."
     pdf: "https://arxiv.org/pdf/2608.15680"
+    image: "./images/Robo-Dopamine.png"
 
   - title: "TACO: TActile World Model as a Self-COrrector for Scalable VLA Post-Training"
     authors: "<strong>Shengbang Liu*</strong>, Yueru Jia*, Yuyang Yan*, Jiaming Liu*, Xinran Zhang, Qiuxuan Feng, Yandong Guo, Shiji Zhou, Boxin Shi, Shanghang Zhang"
