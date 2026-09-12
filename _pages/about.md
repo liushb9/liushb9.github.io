@@ -41,7 +41,7 @@ Education🎓
 - <img src="images/sysu.jpg" alt="SYSU Logo" style="height: 1.2em; vertical-align: middle;"> Bachelor's in Computer Science and Technology, Sun Yat-sen University (2023.9–Present)
 - <img src="images/jz.jpg" alt="JZ Logo" style="height: 1.2em; vertical-align: middle;"> Sun Yat-sen Memorial Middle School (2017.9–2023.6)
 
-Selected Awards and Honors🏆
+Honors🏆
 ======
 - **National Scholarship**, 2025, 2024
 - First Class Academic Scholarship, 2025, 2024
@@ -50,7 +50,7 @@ Personality🥳
 ======
 Beyond academics and research, I enjoy fitness 🏋️, podcasts 🎙️, reading 📚, and comedy 🤣. To me, life is a continuous process of debugging, discovering, and growing. Driven by curiosity, I am always eager to explore the world 🌍 and experience new things—and I can't wait to share adventures and stories with you!
 
-Contact Me💬
+Contact💬
 ======
 If you are interested in joining the [Embodied Decision Intelligence Lab(EDI Lab)](https://thusigs-edi-lab.github.io/) as a **research assistant**, please feel free to reach out to me directly via [edi_hire@163.com](mailto:edi_hire@163.com). In your message, please briefly introduce yourself and share your research interests and relevant experience.
 

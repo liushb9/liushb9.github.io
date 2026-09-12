@@ -44,12 +44,6 @@ author_profile: false
       --fp-shadow: 0 24px 65px -48px rgba(0, 0, 0, 0.8);
     }
 
-    html:not(.light) .footprint-map-legend {
-      border-color: rgba(226, 232, 240, 0.18);
-      background: rgba(24, 34, 48, 0.9);
-      color: #e5e7eb;
-    }
-
     html:not(.light) .footprint-map-frame { background: #111827; }
   }
 
@@ -74,7 +68,7 @@ author_profile: false
   .footprint-kicker {
     margin: 0;
     color: var(--fp-muted);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -92,7 +86,7 @@ author_profile: false
     max-width: 34rem;
     margin: 0;
     color: var(--fp-muted);
-    font-size: 1.08rem;
+    font-size: 1.18rem;
     line-height: 1.6;
   }
 
@@ -128,7 +122,7 @@ author_profile: false
   .footprint-shell-heading h2,
   .footprint-places-heading h2 {
     margin: 0.25rem 0 0;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.025em;
   }
@@ -143,12 +137,18 @@ author_profile: false
     color: var(--fp-text);
     cursor: pointer;
     font: inherit;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     padding: 0.52rem 0.75rem;
     transition: border-color 0.2s ease, background 0.2s ease;
   }
 
   .footprint-reset.is-primary { border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.07); }
+
+  .footprint-reset.is-active {
+    border-color: var(--fp-accent);
+    background: rgba(239, 68, 68, 0.14);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.14);
+  }
 
   .footprint-reset:hover { border-color: var(--fp-accent); background: rgba(239, 68, 68, 0.06); }
   .footprint-reset svg { width: 0.95rem; height: 0.95rem; }
@@ -167,38 +167,7 @@ author_profile: false
     background: #dfe9ed;
   }
 
-  .footprint-map-legend {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 3;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem 0.7rem;
-    max-width: calc(100% - 2rem);
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    border-radius: 0.7rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.55rem 0.7rem;
-    color: #344054;
-    font-size: 0.68rem;
-    backdrop-filter: blur(8px);
-  }
-
-  html.dark .footprint-map-legend {
-    border-color: rgba(226, 232, 240, 0.18);
-    background: rgba(24, 34, 48, 0.9);
-    color: #e5e7eb;
-  }
-
   html.dark .footprint-map-frame { background: #111827; }
-
-  .footprint-map-legend span { display: inline-flex; align-items: center; gap: 0.3rem; }
-  .footprint-map-legend i { display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 50%; }
-  .footprint-map-legend .year-2026 { background: #ef4444; }
-  .footprint-map-legend .year-2025 { background: #eab308; }
-  .footprint-map-legend .year-2023 { background: #10b981; }
-  .footprint-map-legend .year-earlier { background: #64748b; }
 
   #footprint-map {
     width: 100%;
@@ -243,21 +212,9 @@ author_profile: false
   }
 
   .footprint-pin svg { width: 1.65rem; height: 1.65rem; }
-  .footprint-focus h3 { margin: 0; font-size: 1.85rem; letter-spacing: -0.035em; }
-  .footprint-focus-country { margin: 0.2rem 0 0; color: var(--fp-muted); font-size: 0.88rem; }
-  .footprint-focus-province { margin: 0.2rem 0 0; color: var(--fp-muted); font-size: 0.82rem; }
-
-  .footprint-focus-year {
-    display: inline-flex;
-    width: fit-content;
-    margin-top: 0.6rem;
-    border-radius: 999px;
-    background: rgba(239, 68, 68, 0.1);
-    padding: 0.22rem 0.55rem;
-    color: #dc2626;
-    font-size: 0.68rem;
-    font-weight: 700;
-  }
+  .footprint-focus h3 { margin: 0; font-size: 2.05rem; letter-spacing: -0.035em; }
+  .footprint-focus-country { margin: 0.2rem 0 0; color: var(--fp-muted); font-size: 1rem; }
+  .footprint-focus-province { margin: 0.2rem 0 0; color: var(--fp-muted); font-size: 0.92rem; }
 
   .footprint-coordinates {
     display: grid;
@@ -272,8 +229,8 @@ author_profile: false
     padding: 0.7rem;
   }
 
-  .footprint-coordinates dt { color: var(--fp-muted); font-size: 0.66rem; }
-  .footprint-coordinates dd { margin: 0.2rem 0 0; font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+  .footprint-coordinates dt { color: var(--fp-muted); font-size: 0.75rem; }
+  .footprint-coordinates dd { margin: 0.2rem 0 0; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
   .footprint-places { margin-top: 4rem; }
 
   .footprint-year-group { position: relative; margin-top: 2.5rem; padding-left: 1.25rem; }
@@ -293,7 +250,7 @@ author_profile: false
     gap: 0.75rem;
     margin: 0;
     color: var(--fp-text);
-    font-size: 1.12rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.02em;
   }
@@ -342,33 +299,36 @@ author_profile: false
   .footprint-place-card:hover { transform: translateY(-1px); }
 
   .footprint-place-dot {
-    width: 0.5rem;
-    height: 0.5rem;
+    display: inline-flex;
+    width: 1.25rem;
+    height: 1.25rem;
     flex: none;
-    border: 2px solid var(--fp-card);
-    border-radius: 50%;
-    background: var(--fp-accent);
-    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.35);
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
   }
 
   .footprint-place-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; }
-  .footprint-place-copy strong { overflow: hidden; font-size: 0.8rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
-  .footprint-place-copy small { color: var(--fp-muted); font-size: 0.66rem; }
-  .footprint-place-card > svg { width: 0.9rem; height: 0.9rem; flex: none; color: var(--fp-muted); }
+  .footprint-place-copy strong { overflow: hidden; font-size: 0.95rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+  .footprint-place-copy small { color: var(--fp-muted); font-size: 0.78rem; }
+  .footprint-place-card > svg { width: 0.98rem; height: 0.98rem; flex: none; color: var(--fp-muted); }
 
   .footprint-marker {
     width: 1rem;
     height: 1rem;
     border: 3px solid #fff;
     border-radius: 50% 50% 50% 0;
-    background: #64748b;
+    background: var(--fp-accent);
     box-shadow: 0 3px 10px rgba(127, 29, 29, 0.35);
     transform: rotate(-45deg);
   }
 
-  .footprint-marker.year-2026 { background: #ef4444; }
-  .footprint-marker.year-2025 { background: #eab308; }
-  .footprint-marker.year-2023 { background: #10b981; }
   .footprint-marker.is-selected {
     width: 1.25rem;
     height: 1.25rem;
@@ -437,9 +397,9 @@ author_profile: false
     .footprint-page { padding: 1.5rem 0.75rem 3.5rem; }
     .footprint-header { margin-top: 0.25rem; margin-bottom: 2.25rem; }
     .footprint-header h1 { font-size: clamp(2.35rem, 12vw, 3.5rem); }
-    .footprint-header > p:last-child { font-size: 1rem; }
+    .footprint-header > p:last-child { font-size: 1.08rem; }
     .footprint-shell-heading { padding: 1rem; }
-    .footprint-shell-heading h2, .footprint-places-heading h2 { font-size: 1.1rem; }
+    .footprint-shell-heading h2, .footprint-places-heading h2 { font-size: 1.22rem; }
     .footprint-map-frame, #footprint-map { min-height: 25rem; height: 25rem; }
     .footprint-place-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .footprint-place-card { padding: 0.7rem; }
@@ -482,12 +442,6 @@ author_profile: false
     <div class="footprint-map-layout">
       <div class="footprint-map-frame">
         <div id="footprint-map" role="application" aria-label="Map of visited cities"></div>
-        <div class="footprint-map-legend" aria-label="Visit year legend">
-          <span><i class="year-2026"></i>2026</span>
-          <span><i class="year-2025"></i>2025</span>
-          <span><i class="year-2023"></i>2023</span>
-          <span><i class="year-earlier"></i>Earlier</span>
-        </div>
         <div id="footprint-map-fallback" class="footprint-map-fallback">The base map is temporarily unavailable.<br>City coordinates and the place index are still available.</div>
       </div>
       <aside class="footprint-focus" aria-live="polite">
@@ -498,7 +452,6 @@ author_profile: false
           <h3 id="footprint-selected-name">Beijing</h3>
           <p id="footprint-selected-province" class="footprint-focus-province"></p>
           <p id="footprint-selected-country" class="footprint-focus-country">China</p>
-          <span id="footprint-selected-year" class="footprint-focus-year">Earlier</span>
         </div>
         <dl class="footprint-coordinates">
           <div><dt>Latitude</dt><dd id="footprint-selected-lat">39.9042°</dd></div>
@@ -554,13 +507,13 @@ author_profile: false
     const selectedName = document.getElementById('footprint-selected-name');
     const selectedProvince = document.getElementById('footprint-selected-province');
     const selectedCountry = document.getElementById('footprint-selected-country');
-    const selectedYear = document.getElementById('footprint-selected-year');
     const selectedLat = document.getElementById('footprint-selected-lat');
     const selectedLng = document.getElementById('footprint-selected-lng');
     const workButton = document.getElementById('footprint-work');
     const homeButton = document.getElementById('footprint-home');
     const memoryButton = document.getElementById('footprint-memory');
     const nextButton = document.getElementById('footprint-next');
+    const actionButtons = [workButton, homeButton, memoryButton, nextButton];
     const markers = [];
     const travelEmojis = ['👣', '⛰️', '🎒', '🔭', '🌊', '🌅', '🌇', '😀', '🗺️', '🧭', '🌏', '🏜️', '🏞️', '🏕️', '🏛️', '🏖️', '🏯', '🏰', '🗼', '🗽', '🌄', '🏙️', '🌉', '🛫', '🛳️', '🧳', '🌠'];
     const worldDestinations = [
@@ -610,21 +563,29 @@ author_profile: false
       spawnTravelEmoji(event.clientX, event.clientY);
     }, { passive: true });
 
-    function updateDetails(place, yearLabel) {
+    function updateDetails(place) {
       selectedName.textContent = place.name;
       selectedProvince.textContent = place.province || '';
       selectedProvince.hidden = !place.province;
       selectedCountry.textContent = place.country;
-      selectedYear.textContent = yearLabel || place.year;
-      selectedYear.hidden = !yearLabel && !place.year;
       selectedLat.textContent = `${place.lat.toFixed(4)}°`;
       selectedLng.textContent = `${place.lng.toFixed(4)}°`;
     }
 
-    function updateSelection(index, moveMap) {
+    function setActiveAction(button) {
+      actionButtons.forEach(actionButton => {
+        const active = actionButton === button;
+        actionButton.classList.toggle('is-active', active);
+        actionButton.classList.toggle('is-primary', active);
+        actionButton.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    }
+
+    function updateSelection(index, moveMap, actionButton) {
       const place = places[index];
       selectedPlaceIndex = index;
       updateDetails(place);
+      setActiveAction(actionButton || null);
       document.querySelectorAll('.footprint-place-card').forEach(card => card.classList.toggle('is-active', Number(card.dataset.placeIndex) === index));
       markers.forEach(marker => {
         const element = marker.getElement();
@@ -662,17 +623,17 @@ author_profile: false
         card.className = 'footprint-place-card';
         card.dataset.placeIndex = index;
         card.setAttribute('aria-label', `Show ${place.name}, ${place.province ? `${place.province}, ` : ''}${place.country} on the map`);
-        card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true"></span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.province ? `${place.province} · ` : ''}${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
-        card.addEventListener('click', () => updateSelection(index, true));
+        card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true">📍</span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.province ? `${place.province} · ` : ''}${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
+        card.addEventListener('click', () => updateSelection(index, true, null));
         yearGrid.appendChild(card);
       });
       groupElement.appendChild(yearGrid);
       gridElement.appendChild(groupElement);
     });
 
-    function focusPlace(index) {
+    function focusPlace(index, actionButton) {
       if (index < 0) return;
-      updateSelection(index, true);
+      updateSelection(index, true, actionButton);
     }
 
     function jumpToWorldDestination() {
@@ -683,15 +644,17 @@ author_profile: false
         const element = marker.getElement();
         if (element) element.querySelector('.footprint-marker')?.classList.remove('is-selected');
       });
-      updateDetails(place, 'Next destination');
+      setActiveAction(nextButton);
+      updateDetails(place);
       if (map) map.flyTo([place.lat, place.lng], 4, { duration: 1.1 });
     }
 
-    workButton.addEventListener('click', () => focusPlace(places.findIndex(place => place.name === 'Beijing')));
-    homeButton.addEventListener('click', () => focusPlace(places.findIndex(place => place.name === 'Zhongshan')));
+    actionButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
+    workButton.addEventListener('click', () => focusPlace(places.findIndex(place => place.name === 'Beijing'), workButton));
+    homeButton.addEventListener('click', () => focusPlace(places.findIndex(place => place.name === 'Zhongshan'), homeButton));
     memoryButton.addEventListener('click', () => {
       const choices = places.map((place, index) => index).filter(index => index !== selectedPlaceIndex);
-      focusPlace(choices[Math.floor(Math.random() * choices.length)] ?? 0);
+      focusPlace(choices[Math.floor(Math.random() * choices.length)] ?? 0, memoryButton);
     });
     nextButton.addEventListener('click', jumpToWorldDestination);
 
@@ -734,16 +697,15 @@ author_profile: false
     }
 
     places.forEach((place, index) => {
-      const markerClass = place.year === 'Earlier' ? 'year-earlier' : `year-${place.year}`;
-      const markerIcon = L.divIcon({ className: '', html: `<div class="footprint-marker ${markerClass}"></div>`, iconSize: [16, 16], iconAnchor: [8, 16], popupAnchor: [0, -16] });
+      const markerIcon = L.divIcon({ className: '', html: '<div class="footprint-marker"></div>', iconSize: [16, 16], iconAnchor: [8, 16], popupAnchor: [0, -16] });
       const marker = L.marker([place.lat, place.lng], { icon: markerIcon, title: place.name }).addTo(map);
-      marker.bindPopup(`<strong>${place.name}</strong><br><span style="color:#667085">${place.province ? `${place.province}, ` : ''}${place.country}</span><br><span style="color:#667085">${place.year}</span>`);
-      marker.on('click', () => updateSelection(index, false));
+      marker.bindPopup(`<strong>${place.name}</strong><br><span style="color:#667085">${place.province ? `${place.province}, ` : ''}${place.country}</span>`);
+      marker.on('click', () => updateSelection(index, false, null));
       markers.push(marker);
     });
 
     map.fitBounds(cityBounds, { padding: [30, 30], maxZoom: 7 });
-    updateSelection(0, false);
+    updateSelection(0, false, workButton);
     window.addEventListener('resize', () => map.invalidateSize());
   })();
 </script>
