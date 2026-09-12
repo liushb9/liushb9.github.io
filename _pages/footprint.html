@@ -473,7 +473,7 @@ author_profile: false
 <script>
   (() => {
     const places = [
-      ["Beijing", 116.4074, 39.9042, "Earlier", ""],
+      ["Beijing", 116.4074, 39.9042, "2021", ""],
       ["Guangzhou", 113.2644, 23.1291, "Earlier", "Guangdong"],
       ["Zhongshan", 113.3928, 22.5170, "Earlier", "Guangdong"],
       ["Heyuan", 114.7003, 23.7443, "Earlier", "Guangdong"],
@@ -483,7 +483,7 @@ author_profile: false
       ["Zhanjiang", 110.3594, 21.2713, "Earlier", "Guangdong"],
       ["Zhuhai", 113.5767, 22.2707, "Earlier", "Guangdong"],
       ["Shenzhen", 114.0579, 22.5431, "Earlier", "Guangdong"],
-      ["Yulin", 110.1613, 22.6368, "Earlier", "Guangxi"],
+      ["Yulin", 110.1613, 22.6368, "2024", "Guangxi"],
       ["Hong Kong", 114.1694, 22.3193, "Earlier", ""],
       ["Dali", 100.2676, 25.6065, "2023", "Yunnan"],
       ["Kunming", 102.8329, 24.8801, "2023", "Yunnan"],
@@ -597,11 +597,14 @@ author_profile: false
       if (markers[index]) markers[index].openPopup();
     }
 
-    const yearOrder = ['2026', '2025', '2023', 'Earlier'];
+    const yearOrder = ['2026', '2025', '2024', '2023', '2021', 'Earlier'];
     const cityOrder = {
       '2026': ['Shanghai', 'Nanjing', 'Taian', 'Jinan', 'Shantou'],
       '2025': ['Zhaoqing', 'Baoding', 'Chengdu'],
-      '2023': ['Kunming', 'Lijiang', 'Dali']
+      '2024': ['Yulin'],
+      '2023': ['Kunming', 'Lijiang', 'Dali'],
+      '2021': ['Beijing'],
+      'Earlier': ['Zhanjiang', 'Zhongshan', 'Zhuhai', 'Guilin', 'Dongguan', 'Hong Kong', 'Guangzhou', 'Shenzhen', 'Foshan', 'Lianjiang', 'Heyuan', 'Wuzhou', 'Hezhou']
     };
     const yearGroups = new Map(yearOrder.map(year => [year, []]));
     places.forEach((place, index) => yearGroups.get(place.year).push({ place, index }));
