@@ -1,18 +1,6 @@
 # Academic Pages
 **Academic Pages is a Github Pages template for academic websites.**
 
-## Maintaining this personal site
-
-The home page, Publications and Footprint use `_layouts/research.html`. Shared styles live in `assets/css/research.css`; theme, clipboard and reading progress controls live in `assets/js/research.js`.
-
-- Edit publications in `_data/publications.yml`. The `pdf` field supplies the **Paper** button; `page` and `code` supply **Project Page** and **Code**.
-- RoboValue's three links are intentionally empty. Fill them when available, then set `pending_links: false` to remove the “Coming soon” label. Update `venue` when its publication status changes.
-- Set `lead_author` explicitly to choose the author group. `image` is the compressed thumbnail; `image_full` opens the original figure.
-- Edit city coordinates and first-visit years in `_data/footprints.yml`. Both the Footprint page and the home-page city count use this data. The home-page SVG preview is a static illustration; update its pins when adding cities.
-- Edit the biography, education and personal notes in `_includes/research-home.html`. Contact and academic profile links come from `_config.yml`.
-
-The robot is a small SVG interaction in `_includes/robot-playground.html` and `assets/js/robot-playground.js`. It supports keyboard controls and reduced motion. Local font licenses are included in `assets/fonts/`.
-
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")
 
 # Getting Started

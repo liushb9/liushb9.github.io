@@ -1,5 +1,5 @@
 ---
-layout: research
+layout: default
 title: "Footprint"
 permalink: /footprint/
 author_profile: false
@@ -9,37 +9,38 @@ author_profile: false
 
 <style>
   .footprint-page {
-    --fp-bg: var(--bg);
-    --fp-card: var(--surface);
-    --fp-text: var(--text);
-    --fp-muted: var(--muted);
-    --fp-border: var(--border);
-    --fp-accent: var(--accent);
+    --fp-bg: #f8fafb;
+    --fp-card: #ffffff;
+    --fp-text: #111827;
+    --fp-muted: #667085;
+    --fp-border: rgba(15, 23, 42, 0.12);
+    --fp-accent: #ef4444;
     --fp-shadow: 0 24px 65px -48px rgba(15, 23, 42, 0.55);
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 2.25rem 0 5rem;
+    padding: 2.25rem 1.5rem 5rem;
     color: var(--fp-text);
-    font-family: var(--font-body);
+    font-family: "Times New Roman", Times, serif;
   }
 
   html.dark .footprint-page {
-    --fp-bg: var(--bg);
-    --fp-card: var(--surface);
-    --fp-text: var(--text);
-    --fp-muted: var(--muted);
-    --fp-border: var(--border);
-    --fp-accent: var(--accent);
+    --fp-bg: #111827;
+    --fp-card: #182230;
+    --fp-text: #f3f4f6;
+    --fp-muted: #aab4c2;
+    --fp-border: rgba(226, 232, 240, 0.16);
+    --fp-accent: #fb7185;
     --fp-shadow: 0 24px 65px -48px rgba(0, 0, 0, 0.8);
   }
 
   @media (prefers-color-scheme: dark) {
     html:not(.light) .footprint-page {
-      --fp-bg: var(--bg);
-      --fp-card: var(--surface);
-      --fp-text: var(--text);
-      --fp-muted: var(--muted);
-      --fp-border: var(--border);
-      --fp-accent: var(--accent);
+      --fp-bg: #111827;
+      --fp-card: #182230;
+      --fp-text: #f3f4f6;
+      --fp-muted: #aab4c2;
+      --fp-border: rgba(226, 232, 240, 0.16);
+      --fp-accent: #fb7185;
       --fp-shadow: 0 24px 65px -48px rgba(0, 0, 0, 0.8);
     }
 
@@ -141,15 +142,15 @@ author_profile: false
     transition: border-color 0.2s ease, background 0.2s ease;
   }
 
-  .footprint-reset.is-primary { border-color: rgba(118, 86, 158, 0.4); background: rgba(118, 86, 158, 0.07); }
+  .footprint-reset.is-primary { border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.07); }
 
   .footprint-reset.is-active {
     border-color: var(--fp-accent);
-    background: rgba(118, 86, 158, 0.14);
-    box-shadow: 0 0 0 2px rgba(118, 86, 158, 0.14);
+    background: rgba(239, 68, 68, 0.14);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.14);
   }
 
-  .footprint-reset:hover { border-color: var(--fp-accent); background: rgba(118, 86, 158, 0.06); }
+  .footprint-reset:hover { border-color: var(--fp-accent); background: rgba(239, 68, 68, 0.06); }
   .footprint-reset svg { width: 0.95rem; height: 0.95rem; }
 
   .footprint-action-group .footprint-reset { white-space: nowrap; }
@@ -196,7 +197,7 @@ author_profile: false
     gap: 1.15rem;
     min-width: 0;
     border-left: 1px solid var(--fp-border);
-    background: radial-gradient(circle at 100% 0%, rgba(118, 86, 158, 0.12), transparent 43%), var(--fp-card);
+    background: radial-gradient(circle at 100% 0%, rgba(239, 68, 68, 0.12), transparent 43%), var(--fp-card);
     padding: 2rem 1.7rem;
   }
 
@@ -206,8 +207,8 @@ author_profile: false
     height: 3.2rem;
     place-items: center;
     border-radius: 1rem;
-    background: rgba(118, 86, 158, 0.12);
-    color: var(--accent);
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
   }
 
   .footprint-pin svg { width: 1.65rem; height: 1.65rem; }
@@ -261,7 +262,7 @@ author_profile: false
     border: 2px solid var(--fp-card);
     border-radius: 50%;
     background: var(--fp-accent);
-    box-shadow: 0 0 0 1px rgba(118, 86, 158, 0.35);
+    box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.35);
     content: "";
   }
   .footprint-year-heading::after {
@@ -294,7 +295,7 @@ author_profile: false
   }
 
   .footprint-place-card:hover,
-  .footprint-place-card.is-active { border-color: rgba(118, 86, 158, 0.45); background: rgba(118, 86, 158, 0.055); }
+  .footprint-place-card.is-active { border-color: rgba(239, 68, 68, 0.45); background: rgba(239, 68, 68, 0.055); }
   .footprint-place-card:hover { transform: translateY(-1px); }
 
   .footprint-place-dot {
@@ -324,7 +325,7 @@ author_profile: false
     border: 3px solid #fff;
     border-radius: 50% 50% 50% 0;
     background: var(--fp-accent);
-    box-shadow: 0 3px 10px rgba(68, 41, 100, 0.35);
+    box-shadow: 0 3px 10px rgba(127, 29, 29, 0.35);
     transform: rotate(-45deg);
   }
 
@@ -332,7 +333,7 @@ author_profile: false
     width: 1.25rem;
     height: 1.25rem;
     border-width: 4px;
-    box-shadow: 0 0 0 7px rgba(118, 86, 158, 0.2), 0 4px 15px rgba(68, 41, 100, 0.45);
+    box-shadow: 0 0 0 7px rgba(239, 68, 68, 0.2), 0 4px 15px rgba(127, 29, 29, 0.45);
     animation: footprint-marker-pulse 1.8s ease-out infinite;
   }
 
@@ -386,7 +387,6 @@ author_profile: false
   .leaflet-popup-content-wrapper,
   .leaflet-popup-tip { background: var(--fp-card); color: var(--fp-text); }
   .leaflet-popup-content { margin: 0.75rem 0.9rem; font-family: inherit; }
-  .footprint-popup-location { color: var(--fp-muted); }
 
   @media (max-width: 900px) {
     .footprint-map-layout { grid-template-columns: 1fr; }
@@ -394,7 +394,7 @@ author_profile: false
   }
 
   @media (max-width: 680px) {
-    .footprint-page { padding: 1.5rem 0 3.5rem; }
+    .footprint-page { padding: 1.5rem 0.75rem 3.5rem; }
     .footprint-header { margin-top: 0.25rem; margin-bottom: 2.25rem; }
     .footprint-header h1 { font-size: clamp(2.35rem, 12vw, 3.5rem); }
     .footprint-header > p:last-child { font-size: 1.08rem; }
@@ -412,7 +412,7 @@ author_profile: false
   }
 </style>
 
-<main id="main" class="footprint-page shell" aria-labelledby="footprint-title">
+<main class="footprint-page" aria-labelledby="footprint-title">
   <header class="footprint-header">
     <h1 id="footprint-title">The World I See</h1>
     <p>Life is short and the world is wide.</p>
@@ -472,7 +472,34 @@ author_profile: false
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
   (() => {
-    const places = {{ site.data.footprints | jsonify }};
+    const places = [
+      ["Beijing", 116.4074, 39.9042, "2021", ""],
+      ["Guangzhou", 113.2644, 23.1291, "Earlier", "Guangdong"],
+      ["Zhongshan", 113.3928, 22.5170, "Earlier", "Guangdong"],
+      ["Heyuan", 114.7003, 23.7443, "Earlier", "Guangdong"],
+      ["Baoding", 115.4648, 38.8744, "2025", "Hebei"],
+      ["Zhaoqing", 112.4651, 23.0472, "2025", "Guangdong"],
+      ["Dongguan", 113.7518, 23.0207, "Earlier", "Guangdong"],
+      ["Zhanjiang", 110.3594, 21.2713, "Earlier", "Guangdong"],
+      ["Zhuhai", 113.5767, 22.2707, "Earlier", "Guangdong"],
+      ["Shenzhen", 114.0579, 22.5431, "Earlier", "Guangdong"],
+      ["Yulin", 110.1613, 22.6368, "2024", "Guangxi"],
+      ["Hong Kong", 114.1694, 22.3193, "Earlier", ""],
+      ["Dali", 100.2676, 25.6065, "2023", "Yunnan"],
+      ["Kunming", 102.8329, 24.8801, "2023", "Yunnan"],
+      ["Lijiang", 100.2300, 26.8700, "2023", "Yunnan"],
+      ["Wuzhou", 111.2792, 23.4851, "Earlier", "Guangxi"],
+      ["Hezhou", 111.5665, 24.4141, "Earlier", "Guangxi"],
+      ["Guilin", 110.2992, 25.2742, "Earlier", "Guangxi"],
+      ["Foshan", 113.1224, 23.0288, "Earlier", "Guangdong"],
+      ["Chengdu", 104.0668, 30.5728, "2025", "Sichuan"],
+      ["Shanghai", 121.4737, 31.2304, "2026", ""],
+      ["Nanjing", 118.7969, 32.0603, "2026", "Jiangsu"],
+      ["Taian", 117.1291, 36.1949, "2026", "Shandong"],
+      ["Jinan", 117.1201, 36.6512, "2026", "Shandong"],
+      ["Lianjiang", 110.2844, 21.6118, "Earlier", "Guangdong"],
+      ["Shantou", 116.6822, 23.3541, "2026", "Guangdong"]
+    ].map(([name, lng, lat, year, province]) => ({ name, lng, lat, year, province, country: "China" }));
 
     const mapElement = document.getElementById('footprint-map');
     const fallbackElement = document.getElementById('footprint-map-fallback');
@@ -488,7 +515,6 @@ author_profile: false
     const nextButton = document.getElementById('footprint-next');
     const actionButtons = [workButton, homeButton, memoryButton, nextButton];
     const markers = [];
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const travelEmojis = ['👣', '⛰️', '🎒', '🔭', '🌊', '🌅', '🌇', '😀', '🗺️', '🧭', '🌏', '🏜️', '🏞️', '🏕️', '🏛️', '🏖️', '🏯', '🏰', '🗼', '🗽', '🌄', '🏙️', '🌉', '🛫', '🛳️', '🧳', '🌠'];
     const worldDestinations = [
       { name: 'Tokyo', country: 'Japan', lat: 35.6762, lng: 139.6503 },
@@ -520,7 +546,6 @@ author_profile: false
     let selectedPlaceIndex = 0;
 
     function spawnTravelEmoji(x, y) {
-      if (reducedMotion.matches) return;
       const emoji = document.createElement('span');
       emoji.className = 'footprint-emoji-pop';
       emoji.setAttribute('aria-hidden', 'true');
@@ -568,7 +593,7 @@ author_profile: false
       });
       const selectedMarkerElement = markers[index] && markers[index].getElement();
       if (selectedMarkerElement) selectedMarkerElement.querySelector('.footprint-marker')?.classList.add('is-selected');
-      if (moveMap && map) map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 7), { duration: 0.7, animate: !reducedMotion.matches });
+      if (moveMap && map) map.flyTo([place.lat, place.lng], Math.max(map.getZoom(), 7), { duration: 0.7 });
       if (markers[index]) markers[index].openPopup();
     }
 
@@ -624,7 +649,7 @@ author_profile: false
       });
       setActiveAction(nextButton);
       updateDetails(place);
-      if (map) map.flyTo([place.lat, place.lng], 4, { duration: 1.1, animate: !reducedMotion.matches });
+      if (map) map.flyTo([place.lat, place.lng], 4, { duration: 1.1 });
     }
 
     actionButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
@@ -636,7 +661,6 @@ author_profile: false
     });
     nextButton.addEventListener('click', jumpToWorldDestination);
 
-    updateSelection(0, false, workButton);
     if (typeof L === 'undefined') {
       fallbackElement.style.display = 'grid';
       return;
@@ -678,7 +702,7 @@ author_profile: false
     places.forEach((place, index) => {
       const markerIcon = L.divIcon({ className: '', html: '<div class="footprint-marker"></div>', iconSize: [16, 16], iconAnchor: [8, 16], popupAnchor: [0, -16] });
       const marker = L.marker([place.lat, place.lng], { icon: markerIcon, title: place.name }).addTo(map);
-      marker.bindPopup(`<strong>${place.name}</strong><br><span class="footprint-popup-location">${place.province ? `${place.province}, ` : ''}${place.country}</span>`);
+      marker.bindPopup(`<strong>${place.name}</strong><br><span style="color:#667085">${place.province ? `${place.province}, ` : ''}${place.country}</span>`);
       marker.on('click', () => updateSelection(index, false, null));
       markers.push(marker);
     });

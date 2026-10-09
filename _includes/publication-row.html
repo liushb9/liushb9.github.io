@@ -1,0 +1,29 @@
+{% assign paper = include.paper %}
+{% assign paper_url = paper.pdf | default: '' | strip %}
+<div class="pub-row">
+  <div class="pub-img-col">
+    {% if paper.image %}
+      {% assign image_path = paper.image | replace: './images/', '/images/' %}
+      <img src="{{ image_path | prepend: base_path }}" class="teaser-img" alt="Overview of {{ paper.title | escape }}">
+      {% if paper.conference_short %}<span class="conf-badge">{{ paper.conference_short }}</span>{% endif %}
+    {% endif %}
+  </div>
+  <div class="pub-text-col">
+    <div class="title">{% if paper_url != '' %}<a href="{{ paper_url }}">{{ paper.title }}</a>{% else %}<span class="pub-title">{{ paper.title }}</span>{% endif %}</div>
+    <div class="author">{{ paper.authors }}</div>
+    <div class="periodical">{{ paper.conference }}</div>
+    <div class="links">
+      {% assign link_types = 'pdf,page,code' | split: ',' %}
+      {% for link_type in link_types %}
+        {% case link_type %}{% when 'pdf' %}{% assign label = 'Paper' %}{% when 'page' %}{% assign label = 'Project Page' %}{% when 'code' %}{% assign label = 'Code' %}{% endcase %}
+        {% assign link_url = paper[link_type] | default: '' | strip %}
+        {% if link_url != '' %}
+          <a href="{{ link_url }}" class="btn-outline" target="_blank" rel="noopener noreferrer">{{ label }}</a>
+        {% elsif paper.pending_links %}
+          <button class="btn-outline" type="button" disabled title="Coming soon" aria-label="{{ label }} — coming soon">{{ label }}</button>
+        {% endif %}
+      {% endfor %}
+      {% if paper.notes %}<span style="font-size: 13px; margin-left: 5px;"><i style="color:#e74d3c">{{ paper.notes }}</i></span>{% endif %}
+    </div>
+  </div>
+</div>
