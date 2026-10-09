@@ -1,15 +1,15 @@
 /* Small details in the margins of the original academic page. */
-.no-js .robot-study, .no-js .space-trail { display: none; }
+.no-js .space-trail { display: none; }
 .email-copy-mark { margin-left: 2px; font-size: 12px; opacity: .5; }
 [data-copy-email]:hover .email-copy-mark, [data-copy-email]:focus-visible .email-copy-mark { opacity: 1; }
 .sidebar [data-copy-email] { display: inline; color: inherit; }
 .personal-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; overflow: hidden; pointer-events: none; }
 .personal-progress > span { display: block; height: 100%; background: rgba(255, 255, 255, .7); transform: scaleX(0); transform-origin: left; }
 
-/* A point-cloud study of a five-finger hand, without a panel or controls. */
-.robot-study { position: absolute; right: 18px; bottom: var(--robot-footer-bottom, 165px); width: 150px; height: 175px; margin: 0; pointer-events: none; user-select: none; }
-.robot-study canvas { display: block; width: 100%; height: 100%; }
-.robot-study.is-margin { position: fixed; right: max(26px, calc((100vw - 1800px) / 2 + 26px)); bottom: 22px; width: 190px; height: 220px; z-index: 2; margin: 0; }
+/* The dotted arm and hand belong to the white page edge above the footer. */
+body.has-robot-study { padding-bottom: 280px; }
+.robot-study { position: absolute; right: max(18px, calc((100vw - 1800px) / 2 + 18px)); bottom: 100%; width: 360px; margin: 0; pointer-events: none; user-select: none; }
+.robot-study__drawing { display: block; width: 100%; height: auto; }
 
 /* Read down to climb; read back up to return to the launch pad. */
 .space-trail { position: fixed; right: max(28px, calc((100vw - 1800px) / 2 + 28px)); top: 136px; width: 56px; height: min(480px, calc(100dvh - 420px)); z-index: 12; pointer-events: none; color: #917aa2; }
@@ -51,7 +51,8 @@
   .greedy-nav .visible-links { display: flex; gap: 18px; }
   .masthead .masthead__menu-item { margin: 0; }
   .greedy-nav .visible-links a { margin-inline: 0; font-size: 15px; white-space: nowrap; }
-  .robot-study { width: 130px; height: 150px; right: 14px; }
+  body.has-robot-study { padding-bottom: 210px; }
+  .robot-study { width: min(290px, calc(100vw - 28px)); right: 14px; }
   .space-trail.is-compact { width: 34px; right: 7px; }
   .space-trail.is-compact .space-return { width: 34px; height: 56px; }
 }

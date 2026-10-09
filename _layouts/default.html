@@ -11,7 +11,7 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body{% if page.personal_touches %} class="has-robot-study"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -19,6 +19,7 @@ layout: compress
     {{ content }}
 
     <div class="page__footer">
+      {% if page.personal_touches %}{% include robot-study.html %}{% endif %}
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}

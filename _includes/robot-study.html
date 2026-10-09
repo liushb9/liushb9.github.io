@@ -1,0 +1,124 @@
+<div class="robot-study" data-robot-study="" aria-hidden="true">
+  <svg class="robot-study__drawing" viewBox="0 0 390 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="robot-metal-light" width="3.8" height="3.8" patternUnits="userSpaceOnUse">
+        <circle cx="1.2" cy="1.2" r=".55" fill="#9c91a5"/>
+      </pattern>
+      <pattern id="robot-metal-mid" width="3.2" height="3.2" patternUnits="userSpaceOnUse">
+        <circle cx="1" cy="1" r=".72" fill="#88788f"/>
+      </pattern>
+      <pattern id="robot-metal-dark" width="2.5" height="2.5" patternUnits="userSpaceOnUse">
+        <circle cx=".9" cy=".9" r=".8" fill="#6f577e"/>
+      </pattern>
+      <g id="robot-axis" stroke="#887590" stroke-width=".8">
+        <circle r="24" fill="#fff"/>
+        <circle r="24" fill="url(#robot-metal-mid)"/>
+        <circle r="18" fill="#fff"/>
+        <circle r="14" fill="url(#robot-metal-light)"/>
+        <circle r="7" fill="url(#robot-metal-dark)"/>
+        <path d="M-3 0H3M0-3V3" stroke="#fff"/>
+        <g fill="#fff" stroke-width="1">
+          <circle cx="0" cy="-20.5" r="1.7"/><circle cx="20.5" cy="0" r="1.7"/>
+          <circle cx="0" cy="20.5" r="1.7"/><circle cx="-20.5" cy="0" r="1.7"/>
+        </g>
+      </g>
+      <!-- Three rigid phalanges, open drive slots, and exposed hinge pins. -->
+      <g id="robot-digit" stroke="#7d6888" stroke-width=".75" stroke-linejoin="round">
+        <path d="M6-70L10-74V-59L6-55M6-44L10-48V-29L6-25M6-18L10-22V-3L6 1" fill="url(#robot-metal-dark)"/>
+        <path d="M-6-69L-3-72H3L6-69V-55H-6Z" fill="#fff"/>
+        <path d="M-6-69L-3-72H3L6-69V-55H-6Z" fill="url(#robot-metal-mid)"/>
+        <path d="M-4-69H4V-63H-4Z" fill="url(#robot-metal-dark)" stroke="none"/>
+        <rect x="-6" y="-45" width="12" height="18" rx="1" fill="#fff"/>
+        <rect x="-6" y="-45" width="12" height="18" rx="1" fill="url(#robot-metal-light)"/>
+        <rect x="-2" y="-41" width="4" height="10" rx=".6" fill="#fff"/>
+        <path d="M0-39V-33" stroke="#aa94b5" stroke-width="1.3"/>
+        <rect x="-6" y="-19" width="12" height="17" rx="1" fill="#fff"/>
+        <rect x="-6" y="-19" width="12" height="17" rx="1" fill="url(#robot-metal-light)"/>
+        <rect x="-2" y="-15" width="4" height="9" rx=".6" fill="#fff"/>
+        <path d="M0-13V-8" stroke="#aa94b5" stroke-width="1.3"/>
+        <g fill="#fff">
+          <circle cy="-50" r="5.6"/><circle cy="-24" r="6"/><circle r="6.6"/>
+        </g>
+        <g fill="url(#robot-metal-dark)">
+          <circle cy="-50" r="3.6"/><circle cy="-24" r="3.9"/><circle r="4.5"/>
+        </g>
+        <path d="M-2-50H2M0-52V-48M-2-24H2M0-26V-22M-2.5 0H2.5M0-2.5V2.5" stroke="#fff" stroke-width=".8"/>
+      </g>
+    </defs>
+
+    <!-- The arm sits on the page edge: pedestal, shoulder, elbow, and wrist. -->
+    <g data-robot-arm="" stroke="#908095" stroke-width=".85" stroke-linejoin="round">
+      <path d="M287 304L349 304L367 316H273Z" fill="url(#robot-metal-light)"/>
+      <path d="M299 275V304C299 314 346 314 346 304V275Z" fill="#fff"/>
+      <path d="M323 276H346V304C344 309 335 311 323 311Z" fill="url(#robot-metal-mid)"/>
+      <path d="M299 275V304C299 314 346 314 346 304V275Z" fill="url(#robot-metal-light)"/>
+      <ellipse cx="322.5" cy="275" rx="23.5" ry="8" fill="url(#robot-metal-mid)"/>
+      <path d="M305 294H334M306 299H333" stroke="#b1a2b9"/>
+      <circle cx="305" cy="310" r="1.5" fill="#fff"/><circle cx="348" cy="310" r="1.5" fill="#fff"/>
+
+      <path d="M315 273L299 258L311 241L334 258L336 273Z" fill="url(#robot-metal-dark)"/>
+      <path d="M328 250C344 257 348 267 344 275" stroke="#a594b1" stroke-width="2" stroke-dasharray="1 2"/>
+
+      <g transform="translate(305 252) rotate(-133.4)">
+        <path d="M12-15L20-22H98L92-15Z" fill="url(#robot-metal-mid)"/>
+        <path d="M92-15L98-22L105-12V9L98 15H92Z" fill="url(#robot-metal-dark)"/>
+        <path d="M12-15H92L99-8V8L92 15H12L5 8V-8Z" fill="#fff"/>
+        <path d="M12-15H92L99-8V8L92 15H12L5 8V-8Z" fill="url(#robot-metal-light)"/>
+        <rect x="27" y="-6" width="49" height="12" rx="5" fill="url(#robot-metal-dark)"/>
+        <path d="M36 0H67" stroke="#fff" stroke-width="2"/>
+        <path d="M19-10H83M19 10H83" stroke="#c4b8cc" stroke-width=".65"/>
+      </g>
+
+      <g transform="translate(140 177) rotate(-3.7)">
+        <path d="M5-12L12-18H86L91-12Z" fill="url(#robot-metal-mid)"/>
+        <path d="M91-12L96-17L101-9V9L91 13Z" fill="url(#robot-metal-dark)"/>
+        <path d="M5-12H89L96-5V6L89 13H5Z" fill="#fff"/>
+        <path d="M5-12H89L96-5V6L89 13H5Z" fill="url(#robot-metal-light)"/>
+        <rect x="20" y="-5" width="54" height="11" rx="4" fill="url(#robot-metal-dark)"/>
+        <path d="M28 .5H66" stroke="#fff" stroke-width="2"/>
+        <circle cx="13" cy=".5" r="1.2" fill="#fff"/><circle cx="82" cy=".5" r="1.2" fill="#fff"/>
+      </g>
+
+      <path d="M153 189C177 201 204 192 221 184" stroke="#9f8caa" stroke-width="2.5" stroke-dasharray="1 2.2"/>
+      <use href="#robot-axis" transform="translate(307 252) scale(1.05)"/>
+      <use href="#robot-axis" transform="translate(234 171) scale(1.1)"/>
+      <use href="#robot-axis" transform="translate(140 177) scale(.66)"/>
+
+      <g transform="translate(132 176) rotate(-121)">
+        <path d="M0-10H28L33-5V7L27 11H0Z" fill="url(#robot-metal-mid)"/>
+        <path d="M8-10H12V11H8M20-10H24V11H20" fill="url(#robot-metal-dark)"/>
+      </g>
+      <path d="M100 146L106 140H130L138 147V155H100Z" fill="url(#robot-metal-dark)"/>
+      <path d="M103 150H134" stroke="#fff" stroke-width="1.2"/>
+      <circle cx="108" cy="146" r="1.7" fill="#fff"/><circle cx="128" cy="146" r="1.7" fill="#fff"/>
+    </g>
+
+    <!-- A five-finger mechanism with an open palm frame, rather than a skin silhouette. -->
+    <g data-robot-hand="" transform="rotate(-12 116 132)" stroke="#826e8f" stroke-width=".8" stroke-linejoin="round">
+      <path d="M149 84L158 77V136L149 145Z" fill="url(#robot-metal-dark)"/>
+      <path d="M81 84L88 77H151L158 77L149 84Z" fill="url(#robot-metal-mid)"/>
+      <use href="#robot-digit" transform="translate(87 87) rotate(-6) scale(1 .87)"/>
+      <use href="#robot-digit" transform="translate(107 83)"/>
+      <use href="#robot-digit" transform="translate(127 85) rotate(4) scale(1 .94)"/>
+      <use href="#robot-digit" transform="translate(146 91) rotate(9) scale(.93 .72)"/>
+      <path d="M81 84H145L151 90V137L144 145H82L76 139V90Z" fill="#fff"/>
+      <path d="M81 84H145L151 90V137L144 145H82L76 139V90Z M85 100V132H96V100Z M103 100V132H114V100Z M121 100V132H132V100Z M139 103V128H146V103Z" fill="url(#robot-metal-mid)" fill-rule="evenodd"/>
+      <g fill="#fff">
+        <rect x="85" y="100" width="11" height="32" rx="1"/><rect x="103" y="100" width="11" height="32" rx="1"/>
+        <rect x="121" y="100" width="11" height="32" rx="1"/><rect x="139" y="103" width="7" height="25" rx="1"/>
+      </g>
+      <path d="M90.5 103V129M108.5 103V129M126.5 103V129M142.5 106V125" stroke="#ae98ba" stroke-width="2.5"/>
+      <path d="M90.5 113V123M108.5 113V123M126.5 113V123M142.5 115V122" stroke="#6e547e" stroke-width="4"/>
+      <path d="M82 94H146M84 139H143" stroke="#b4a3bf"/>
+      <g fill="#fff">
+        <circle cx="81" cy="91" r="1.8"/><circle cx="144" cy="91" r="1.8"/>
+        <circle cx="83" cy="137" r="1.8"/><circle cx="144" cy="136" r="1.8"/>
+      </g>
+      <path d="M78 113L70 108L63 115L70 124L79 122Z" fill="url(#robot-metal-dark)"/>
+      <use href="#robot-digit" transform="translate(70 116) rotate(-57) scale(.95 .62)"/>
+      <circle cx="78" cy="115" r="7.3" fill="#fff"/>
+      <circle cx="78" cy="115" r="4.8" fill="url(#robot-metal-dark)"/>
+      <path d="M75.5 115H80.5M78 112.5V117.5" stroke="#fff"/>
+    </g>
+  </svg>
+</div>
