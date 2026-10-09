@@ -4,7 +4,7 @@
   <div class="pub-img-col">
     {% if paper.image %}
       {% assign image_path = paper.image | replace: './images/', '/images/' %}
-      <img src="{{ image_path | prepend: base_path }}" class="teaser-img" alt="Overview of {{ paper.title | escape }}">
+      <img src="{{ image_path | prepend: base_path }}" class="teaser-img" alt="Overview of {{ paper.title | escape }}" loading="lazy">
       {% if paper.conference_short %}<span class="conf-badge">{{ paper.conference_short }}</span>{% endif %}
     {% endif %}
   </div>

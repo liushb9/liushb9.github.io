@@ -9,6 +9,8 @@
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+    {% elsif page.personal_touches and author.avatar == 'profile2.jpg' %}
+      <img src="{{ '/images/profile2-480.webp' | prepend: base_path }}" srcset="{{ '/images/profile2-240.webp' | prepend: base_path }} 240w, {{ '/images/profile2-480.webp' | prepend: base_path }} 480w" sizes="(max-width: 1199px) 90px, 200px" class="author__avatar" alt="{{ author.name }}" width="480" height="721">
     {% else %}
     	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
     {% endif %}
@@ -34,7 +36,7 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ author.email }}</li>
+        <li><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{% if page.personal_touches %}<a href="mailto:{{ author.email }}" role="button" aria-label="Copy email address: {{ author.email }}" data-copy-email="{{ author.email }}" title="Copy email address">{{ author.email }} <span class="email-copy-mark" data-copy-mark aria-hidden="true">⧉</span></a><span class="visually-hidden" data-copy-status role="status"></span>{% else %}{{ author.email }}{% endif %}</li>
       {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->

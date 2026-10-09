@@ -1,0 +1,102 @@
+<section class="playground" data-playground aria-labelledby="playground-title">
+  <h2 id="playground-title">Playground 🤖</h2>
+  <div class="toy-desk__heading">
+    <p id="toy-desk-help">Drag, toss, stack. Make yourself at home.</p>
+    <button class="playground-action" type="button" data-tidy><span aria-hidden="true">↺</span> Tidy up</button>
+  </div>
+  <div class="toy-desk" data-toy-desk role="group" aria-label="Desk toys" aria-describedby="toy-desk-help">
+    <span class="toy-desk__note" aria-hidden="true">go on, pick one up ↘</span>
+    <button class="desk-toy desk-toy--robot" type="button" data-toy="robot" data-width="82" data-height="80" aria-label="Toss the robot. You can also drag it.">
+      <svg viewBox="0 0 82 80" fill="none" aria-hidden="true">
+        <g stroke="#553961" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M41 14V5"/><circle cx="41" cy="5" r="3" fill="#c5a459"/>
+          <rect x="3" y="29" width="8" height="24" rx="3" fill="#cbb5dc"/><rect x="71" y="29" width="8" height="24" rx="3" fill="#cbb5dc"/>
+          <rect x="9" y="14" width="64" height="62" rx="13" fill="#f1eaf7"/>
+          <rect x="17" y="23" width="48" height="31" rx="7" fill="#fff"/>
+          <circle cx="29" cy="38" r="5" fill="#5a1a8a"/><circle cx="53" cy="38" r="5" fill="#5a1a8a"/>
+          <path d="M28 63H54M33 59V67M41 59V67M49 59V67"/>
+        </g>
+        <circle cx="30.5" cy="36.5" r="1.5" fill="#fff"/><circle cx="54.5" cy="36.5" r="1.5" fill="#fff"/>
+      </svg>
+    </button>
+    <button class="desk-toy desk-toy--book" type="button" data-toy="book" data-width="70" data-height="88" aria-label="Toss the notebook. You can also drag it.">
+      <svg viewBox="0 0 70 88" fill="none" aria-hidden="true">
+        <g stroke="#553961" stroke-width="2" stroke-linejoin="round">
+          <path d="M8 7H59L65 12V80H13C7 80 4 78 4 73V13C4 9 5 7 8 7Z" fill="#dccbe8"/>
+          <path d="M13 72H65V81H13C2 81 2 72 13 72Z" fill="#fff"/>
+          <path d="M14 8V72M15 76H58" stroke="#aa8ebd"/>
+          <rect x="23" y="22" width="32" height="22" rx="2" fill="#fff"/>
+          <path d="M29 30H48M29 35H44" stroke="#aa8ebd"/>
+          <path d="M49 72V85L53 82L57 85V72" fill="#c5a459"/>
+        </g>
+        <text x="39" y="58" text-anchor="middle" fill="#553961" font-family="Georgia, serif" font-size="10" font-style="italic">notes</text>
+      </svg>
+    </button>
+    <button class="desk-toy desk-toy--globe" type="button" data-toy="globe" data-width="80" data-height="80" aria-label="Toss the globe. You can also drag it.">
+      <svg viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <defs><clipPath id="toy-globe-clip"><circle cx="40" cy="40" r="36"/></clipPath></defs>
+        <circle cx="40" cy="40" r="36" fill="#e2e8ee"/>
+        <g clip-path="url(#toy-globe-clip)" fill="#94afa6" stroke="#553961" stroke-width="1.5" stroke-linejoin="round">
+          <path d="M17 6L31 14L27 26L17 29L16 37L6 32L-1 22M27 40L40 45L43 54L35 64L29 76L23 57Z"/>
+          <path d="M47 4L48 19L41 25L47 34L57 36L59 28L67 37L82 35L76 13ZM50 38L64 42L65 53L56 65L47 50ZM66 60L76 58L82 68L71 76Z"/>
+        </g>
+        <g stroke="#553961" stroke-width="1" opacity=".28"><ellipse cx="40" cy="40" rx="18" ry="36"/><path d="M7 27H73M4 40H76M7 53H73"/></g>
+        <circle cx="40" cy="40" r="36" stroke="#553961" stroke-width="2"/>
+        <path d="M15 25C18 17 23 13 29 11" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="desk-toy desk-toy--barbell" type="button" data-toy="barbell" data-width="112" data-height="54" aria-label="Toss the barbell. You can also drag it.">
+      <svg viewBox="0 0 112 54" fill="none" aria-hidden="true">
+        <g stroke="#553961" stroke-width="2" stroke-linejoin="round">
+          <rect x="3" y="23" width="106" height="8" rx="3" fill="#e2dedf"/>
+          <rect x="13" y="9" width="13" height="36" rx="3" fill="#ceb070"/>
+          <rect x="26" y="4" width="13" height="46" rx="3" fill="#e4c88e"/>
+          <rect x="73" y="4" width="13" height="46" rx="3" fill="#e4c88e"/>
+          <rect x="86" y="9" width="13" height="36" rx="3" fill="#ceb070"/>
+          <path d="M46 23V31M51 23V31M56 23V31M61 23V31M66 23V31" stroke="#aa8ebd"/>
+        </g>
+      </svg>
+    </button>
+    <span class="toy-desk__floor" aria-hidden="true"></span>
+    <span class="visually-hidden" data-toy-status role="status"></span>
+  </div>
+  <details class="grab-game" data-grab-game>
+    <summary><span class="grab-game__open-label">Try a grab <span aria-hidden="true">↗</span></span><span class="grab-game__close-label">Put the gripper away <span aria-hidden="true">↙</span></span><span class="grab-game__summary-note">a tiny robot break</span></summary>
+    <div class="grab-game__heading">
+      <p id="grab-game-help"><span class="grab-game__desktop-help">Move with ← → · Space to grab</span><span class="grab-game__mobile-help">Tap above a block, then press Grab</span></p>
+      <span class="grab-game__score"><strong data-grab-score>0</strong> / 4 collected</span>
+    </div>
+    <div class="grab-game__stage" data-grab-stage tabindex="0" role="group" aria-label="Robot gripper game" aria-describedby="grab-game-help grab-game-status">
+      <svg viewBox="0 0 560 280" aria-hidden="true" fill="none">
+        <path d="M24 31H536" stroke="#d1c4d9" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 25V37M80 27V35M120 25V37M160 27V35M200 25V37M240 27V35M280 25V37M320 27V35M360 25V37M400 27V35M440 25V37M480 27V35M520 25V37" stroke="#d1c4d9"/>
+        <path d="M18 253H542" stroke="#baa7c7" stroke-width="1.5"/>
+        <path d="M447 195V251H529V195" fill="#f5eff9" stroke="#b9a3c8" stroke-width="2"/>
+        <g data-grab-blocks></g>
+        <path d="M447 221V251H529V221" fill="#e6d9ee" fill-opacity=".85" stroke="#a88abb" stroke-width="2"/>
+        <text x="488" y="241" fill="#705181" text-anchor="middle" font-size="11" font-family="Georgia, serif" letter-spacing="2">COLLECT</text>
+        <path d="M444 194H451M525 194H532" stroke="#705181" stroke-width="3" stroke-linecap="round"/>
+        <line data-claw-cable x1="165" y1="40" x2="165" y2="66" stroke="#8e70a0" stroke-width="2"/>
+        <g data-claw-cart transform="translate(165 31)" stroke="#5a1a8a" stroke-width="1.8">
+          <rect x="-16" y="-8" width="32" height="17" rx="4" fill="#fff"/>
+          <circle cx="-9" cy="0" r="2" fill="#c5a459"/><circle cx="9" cy="0" r="2" fill="#c5a459"/>
+        </g>
+        <g data-claw-head transform="translate(165 75)" stroke="#5a1a8a" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="-14" y="-8" width="28" height="17" rx="4" fill="#d9c6e6" stroke-width="2"/>
+          <path data-claw-left d="M-12 8L-24 23L-21 38L-16 38" stroke-width="3.5"/>
+          <path data-claw-right d="M12 8L24 23L21 38L16 38" stroke-width="3.5"/>
+          <circle cx="0" cy="0" r="2.5" fill="#fff" stroke-width="1.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="grab-game__controls">
+      <div class="grab-game__move-controls">
+        <button class="playground-action grab-game__arrow" type="button" data-grab-left aria-label="Move gripper left">←</button>
+        <button class="playground-action grab-game__grab" type="button" data-grab aria-label="Grab a block">Grab <span aria-hidden="true">↓</span></button>
+        <button class="playground-action grab-game__arrow" type="button" data-grab-right aria-label="Move gripper right">→</button>
+      </div>
+      <button class="playground-action grab-game__reset" type="button" data-grab-reset>↺ Start over</button>
+    </div>
+    <p class="grab-game__status" id="grab-game-status" data-grab-status role="status">Four blocks. Let's see your aim.</p>
+  </details>
+</section>
