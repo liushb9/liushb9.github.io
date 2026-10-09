@@ -1,0 +1,32 @@
+<section class="robot-lab" data-robot-lab aria-labelledby="robot-lab-title" tabindex="-1">
+  <div class="robot-lab__bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><h2 id="robot-lab-title">A little robot playground</h2><button type="button" class="robot-reset icon-button" data-robot-reset aria-label="Reset robot playground" title="Reset (R)">{% include research-icon.html name="reset" %}</button></div>
+  <div class="robot-lab__intro"><span class="lab-kicker">Pick. Place. Repeat.</span><span class="lab-status" data-robot-status role="status" aria-live="polite">Choose a target</span></div>
+  <div class="robot-scene">
+    <svg class="robot-scene__drawing" viewBox="0 0 440 300" aria-hidden="true">
+      <defs><pattern id="lab-grid" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" class="scene-grid-dot"></circle></pattern></defs>
+      <rect width="440" height="300" fill="url(#lab-grid)"></rect>
+      <ellipse cx="226" cy="254" rx="168" ry="19" class="scene-shadow"></ellipse>
+      <path d="m40 232 97-100h251l-79 100Z" class="scene-table"></path>
+      <path d="M40 232v10h269v-10m0 10 79-100v-10" class="scene-table-edge"></path>
+      <g class="scene-table-grid"><path d="m87 232 93-100m-44 100 90-100m-40 100 85-100m-35 100 81-100m-31 100 76-100M61 210h266M82 188h262M103 166h260"></path></g>
+      <path d="M100 246h52v13h-52Z" class="arm-base-bottom"></path>
+      <ellipse cx="126" cy="246" rx="26" ry="9" class="arm-base-top"></ellipse>
+      <path d="M116 230v16c0 5 20 5 20 0v-16Z" class="arm-pedestal"></path>
+      <path d="M126 231 171 117" class="arm-shadow" data-arm-upper-shadow></path><path d="m171 117 77 22" class="arm-shadow" data-arm-lower-shadow></path>
+      <path d="M126 231 171 117" class="arm-upper" data-arm-upper></path><path d="m171 117 77 22" class="arm-lower" data-arm-lower></path>
+      <path d="M126 231 171 117" class="arm-highlight" data-arm-upper-highlight></path><path d="m171 117 77 22" class="arm-highlight" data-arm-lower-highlight></path>
+      <circle cx="126" cy="231" r="15" class="arm-joint"></circle><circle cx="126" cy="231" r="5" class="arm-joint-center"></circle>
+      <g data-arm-elbow><circle r="13" class="arm-joint"></circle><circle r="4" class="arm-joint-center"></circle></g>
+      <g transform="translate(248 139)" data-arm-gripper><circle r="9" class="arm-wrist"></circle><path d="M0 7v9m-11 0h22m-11 0v10l4 4m7-14v10l-4 4" class="arm-gripper"></path></g>
+      <g transform="translate(257 202)" data-robot-cube><path d="m-11-6 11-6 11 6-11 6Z" class="cube-top"></path><path d="m-11-6 11 6v15l-11-6Z" class="cube-left"></path><path d="m0 0 11-6V9L0 15Z" class="cube-right"></path></g>
+      <g class="scene-label"><path d="M49 278h24m-12-12v24"></path><text x="83" y="282">A small world. A useful first step.</text></g>
+    </svg>
+    <div class="robot-targets" aria-label="Robot placement targets">
+      <button class="robot-target robot-target--a" type="button" data-robot-target="A" data-target-x="294" data-target-y="156" aria-label="Place the cube at target A"><span>A</span></button>
+      <button class="robot-target robot-target--b" type="button" data-robot-target="B" data-target-x="351" data-target-y="186" aria-label="Place the cube at target B"><span>B</span></button>
+      <button class="robot-target robot-target--c" type="button" data-robot-target="C" data-target-x="310" data-target-y="219" aria-label="Place the cube at target C"><span>C</span></button>
+    </div>
+  </div>
+  <div class="robot-lab__footer"><div class="lab-stages" aria-label="Experiment progress"><span class="is-active" data-lab-stage="observe"><i></i> Observe</span><span data-lab-stage="act"><i></i> Act</span><span data-lab-stage="learn"><i></i> Learn</span></div><span class="lab-counter"><span data-robot-count>0</span> placed</span></div>
+  <noscript><p class="lab-noscript">Enable JavaScript to play with the robot.</p></noscript>
+</section>

@@ -1,32 +1,74 @@
 main:
+  - title: "RoboValue: A Fine-Grained Sim-and-Real Benchmark for Unified Evaluation of Robotic Value Models"
+    authors: "<strong>Shengbang Liu*</strong>, Zhengye Du*, Zhilong Wan*, Honghao Su*, Chenxiang Xia, Chang Ge, Jinyang Xiao, Nan Wang, Zhipeng Hu, Huining Yuan, Shu'ang Yu, Yue Chen, Tianxing Chen, Chuankang Li, Maoqing Yao, Wenbo Ding, Yu Wang, Guanghui Ren, Chao Yu"
+    year: 2026
+    venue: "Manuscript"
+    lead_author: true
+    conference_short: "2026"
+    conference: "Manuscript, 2026."
+    summary: "A unified sim-and-real benchmark for understanding when robotic value models give reliable feedback."
+    pdf: ""
+    page: ""
+    code: ""
+    pending_links: true
+    image: "/images/research/robovalue.webp"
+    image_full: "/images/research/robovalue-overview.png"
+    image_width: 1100
+    image_height: 794
+    new: true
+
   - title: "Robo-Dopamine 2.0: History-Conditioned and OOD-Aware Process Reward Modeling for Robotic Manipulation"
     authors: "Yijie Xu, Haopeng Jin, Run Zhou, <strong>Shengbang Liu*</strong>, Sixiang Chen, Hongyang Cheng, Sicheng Hu, Peterson Co, Jinwen Luo, Huajie Tan, Shanghang Zhang"
     conference_short: "arXiv 2026"
     conference: "arXiv Preprint, 2026."
+    year: 2026
+    lead_author: true
+    summary: "History-conditioned, OOD-aware process rewards that distinguish valid progress, failure, and recovery."
     pdf: "https://arxiv.org/pdf/2608.15680"
-    image: "./images/Robo-Dopamine.png"
+    image: "/images/research/robo-dopamine.webp"
+    image_full: "/images/Robo-Dopamine.png"
+    image_width: 1000
+    image_height: 477
 
   - title: "TACO: TActile World Model as a Self-COrrector for Scalable VLA Post-Training"
     authors: "<strong>Shengbang Liu*</strong>, Yueru Jia*, Yuyang Yan*, Jiaming Liu*, Xinran Zhang, Qiuxuan Feng, Yandong Guo, Shiji Zhou, Boxin Shi, Shanghang Zhang"
     conference_short: "arXiv 2026"
     conference: "arXiv Preprint, 2026."
+    year: 2026
+    lead_author: true
+    summary: "A tactile world model that imagines local corrections for scalable robot policy post-training."
     pdf: "https://arxiv.org/pdf/2607.02840"
     page: "https://taco-wm.github.io/"
     code: "https://github.com/liushb9/TACO"
-    image: "./images/TACO.png"
+    image: "/images/research/taco.webp"
+    image_full: "/images/TACO.png"
+    image_width: 1000
+    image_height: 304
 
   - title: "Video2Act: A Dual-System Video Diffusion Policy with Robotic Spatio-Motional Modeling"
     authors: "Yueru Jia*, Jiaming Liu*, <strong>Shengbang Liu*</strong>, Rui Zhou, Wanhe Yu, Yuyang Yan, Xiaowei Chi, Yandong Guo, Boxin Shi, Shanghang Zhang"
     conference_short: "arXiv 2025"
     conference: "arXiv Preprint, 2025."
+    year: 2025
+    lead_author: true
+    summary: "Spatial and motion-aware video representations connect slow reasoning with fast robotic actions."
     pdf: "https://arxiv.org/pdf/2512.03044"
     page: "https://video2act.github.io/"
     code: "https://github.com/jiayueru/Video2Act"
-    image: "./images/Video2Act.png"
+    image: "/images/research/video2act.webp"
+    image_full: "/images/Video2Act.png"
+    image_width: 1000
+    image_height: 372
 
   - title: "Decomposed Object Manipulation via Dual-Actor Policy"
     authors: "Bin Fan*, Jianjian Jiang*, Zhuohao Li, Yixiang He, Xiaoming Wu, Yihan Yang, <strong>Shengbang Liu</strong>, Weishi Zheng"
     conference_short: "arXiv 2025"
     conference: "arXiv Preprint, 2025."
+    year: 2025
+    lead_author: false
+    summary: "Separate approaching and manipulation actors, guided by affordance and motion-flow priors."
     pdf: "https://arxiv.org/abs/2511.05129"
-    image: "./images/Decomposed Object Manipulation via Dual-Actor Policy.png"
+    image: "/images/research/dual-actor.webp"
+    image_full: "/images/Decomposed Object Manipulation via Dual-Actor Policy.png"
+    image_width: 1000
+    image_height: 335

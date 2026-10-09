@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Shengbang Liu, home">
+      <span class="brand-mark" aria-hidden="true">sl<span></span></span>
+      <span>Shengbang Liu</span>
+    </a>
+    <div class="site-header__actions">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/#about' | relative_url }}">About</a>
+        <a href="{{ '/publications/' | relative_url }}"{% if page.permalink == '/publications/' %} aria-current="page"{% endif %}>Research</a>
+        <a href="{{ '/footprint/' | relative_url }}"{% if page.permalink == '/footprint/' %} aria-current="page"{% endif %}>Footprint</a>
+        <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      </nav>
+      <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" data-theme-toggle>
+        <span class="theme-sun">{% include research-icon.html name="sun" %}</span>
+        <span class="theme-moon">{% include research-icon.html name="moon" %}</span>
+      </button>
+    </div>
+  </div>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+</header>
