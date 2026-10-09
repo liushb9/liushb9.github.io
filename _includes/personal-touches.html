@@ -1,23 +1,37 @@
 <aside class="space-trail" data-space-trail aria-label="Reading progress">
-  <span class="space-trail__start" aria-hidden="true">LIFT OFF</span>
+  <span class="space-trail__moon" aria-hidden="true">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M20 4A11 11 0 1 0 24 21A11 11 0 0 1 20 4Z" fill="#f3edf7" stroke="#a48ab5"/><path d="M23 6V10M21 8H25" stroke="#bba36a" stroke-linecap="round"/></svg>
+  </span>
   <span class="space-trail__line" aria-hidden="true"></span>
+  <span class="space-trail__pad" aria-hidden="true">
+    <svg viewBox="0 0 72 22" fill="none"><path d="M10 9H62M15 13H57M20 13L15 19M52 13L57 19" stroke="#b4a0c2" stroke-linecap="round"/><path class="space-trail__dust" d="M24 5C20 0 9 2 8 6M48 5C53 0 64 2 65 6" stroke="#cec0d8" stroke-linecap="round"/></svg>
+  </span>
   <button class="space-return" type="button" data-space-return aria-label="Back to top" title="Back to top">
-    <svg class="spacewalker" viewBox="0 0 64 88" fill="none" aria-hidden="true">
-      <path d="M14 49C-3 43 7 68 1 77" stroke="#bca5cc" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <g stroke="#5a1a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="12" y="34" width="39" height="28" rx="7" fill="#e7deee"/>
-        <path d="M22 55L19 73L14 78L24 80L30 61M37 57L42 74L49 76L46 83L36 78L32 63" fill="#fff"/>
-        <path d="M22 34L10 38L6 30L2 33L7 47L20 45M43 35L53 39L58 30L62 33L55 48L43 45" fill="#fff"/>
-        <rect x="19" y="32" width="27" height="31" rx="9" fill="#fff"/>
-        <rect x="25" y="42" width="15" height="10" rx="2" fill="#ede5f3"/>
-        <circle cx="32" cy="20" r="17" fill="#fff"/>
-        <rect x="19" y="10" width="26" height="20" rx="9" fill="#c2aad3"/>
-        <path d="M24 14L28 12M24 18L34 13" stroke="#fff" stroke-width="2.5"/>
-        <path d="M26 57H38"/>
+    <svg class="space-rocket" viewBox="0 0 72 118" fill="none" aria-hidden="true">
+      <g class="space-rocket__flame">
+        <path d="M27 91C22 100 29 110 36 117C43 109 50 100 45 91Z" fill="#d8b776"/>
+        <path d="M31 92C28 99 33 106 36 110C40 105 43 99 41 92Z" fill="#fff2d4"/>
       </g>
-      <circle cx="29" cy="47" r="1.6" fill="#5a1a8a"/><circle cx="35" cy="47" r="1.6" fill="#c4a259"/>
-      <path class="spacewalker__spark" d="M54 58V66M50 62H58M9 15V21M6 18H12" stroke="#c4a259" stroke-width="1.5"/>
+      <g stroke="#694187" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 61L10 76V94L27 83M51 61L62 76V94L45 83" fill="#e7ddeb"/>
+        <path d="M36 6C23 19 19 35 19 59C19 70 22 79 26 86H46C50 79 53 70 53 59C53 35 49 19 36 6Z" fill="#fff"/>
+        <path d="M25 22C28 16 32 10 36 6C40 10 44 16 47 22Z" fill="#ddd0e8"/>
+        <path d="M22 69H50M26 79H46" stroke="#bba6ca"/>
+        <path d="M28 86H44L47 93H25Z" fill="#d9cde2"/>
+        <circle cx="36" cy="45" r="14" fill="#f1eaf5"/>
+        <path d="M25 53C26 47 31 47 36 47C42 47 46 49 47 54" fill="#fff" stroke-width="1.2"/>
+        <circle cx="36" cy="42" r="8.5" fill="#fff" stroke-width="1.2"/>
+        <rect x="30" y="37" width="12" height="9" rx="4" fill="#9b80b1" stroke-width="1.1"/>
+        <path d="M32 39L35 38M32 42L38 39" stroke="#fff" stroke-width="1.4"/>
+        <path d="M42 49L45 45L46 41" stroke="#694187" stroke-width="2.5"/>
+        <path d="M42 49L45 45L46 41" stroke="#fff" stroke-width="1.2"/>
+        <circle cx="36" cy="45" r="14" stroke="#9474aa"/>
+      </g>
+      <path class="space-rocket__stars" d="M9 17V25M5 21H13M59 35V41M56 38H62" stroke="#c4a259" stroke-width="1.4" stroke-linecap="round"/>
     </svg>
   </button>
-  <span class="space-trail__end" aria-hidden="true"><span data-space-percent>0%</span><span class="space-trail__landed">LANDED</span></span>
+  <span class="space-trail__readout" aria-hidden="true"><span data-space-percent>0%</span><span class="space-trail__state" data-space-state>ON EARTH</span></span>
 </aside>
+<div class="robot-study" data-robot-study aria-hidden="true">
+  <canvas data-robot-points width="420" height="460"></canvas>
+</div>
