@@ -314,6 +314,13 @@ author_profile: false
     line-height: 1;
   }
 
+  .footprint-place-dot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
   .footprint-place-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; }
   .footprint-place-copy strong { overflow: hidden; font-size: 0.95rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
   .footprint-place-copy small { color: var(--fp-muted); font-size: 0.78rem; }
@@ -473,22 +480,22 @@ author_profile: false
 <script>
   (() => {
     const places = [
-      ["Beijing", 116.4074, 39.9042, "2021", "", "🏯"],
-      ["Guangzhou", 113.2644, 23.1291, "Earlier", "Guangdong", "🥟"],
-      ["Zhongshan", 113.3928, 22.5170, "Earlier", "Guangdong", "💡"],
-      ["Heyuan", 114.7003, 23.7443, "Earlier", "Guangdong", "🦖"],
+      ["Beijing", 116.4074, 39.9042, "2021", "", ""],
+      ["Guangzhou", 113.2644, 23.1291, "Earlier", "Guangdong", "🍵"],
+      ["Zhongshan", 113.3928, 22.5170, "Earlier", "Guangdong", "🕊️"],
+      ["Heyuan", 114.7003, 23.7443, "Earlier", "Guangdong", "♨️"],
       ["Baoding", 115.4648, 38.8744, "2025", "Hebei", "🫏"],
       ["Zhaoqing", 112.4651, 23.0472, "2025", "Guangdong", "⛰️"],
       ["Dongguan", 113.7518, 23.0207, "Earlier", "Guangdong", "🏭"],
       ["Zhanjiang", 110.3594, 21.2713, "Earlier", "Guangdong", "🦪"],
       ["Zhuhai", 113.5767, 22.2707, "Earlier", "Guangdong", "🏖️"],
-      ["Shenzhen", 114.0579, 22.5431, "Earlier", "Guangdong", "🤖"],
+      ["Shenzhen", 114.0579, 22.5431, "Earlier", "Guangdong", "🦅"],
       ["Yulin", 110.1613, 22.6368, "2024", "Guangxi", "🌿"],
       ["Hong Kong", 114.1694, 22.3193, "Earlier", "", "🚋"],
       ["Dali", 100.2676, 25.6065, "2023", "Yunnan", "🌊"],
       ["Kunming", 102.8329, 24.8801, "2023", "Yunnan", "🌸"],
       ["Lijiang", 100.2300, 26.8700, "2023", "Yunnan", "🏔️"],
-      ["Wuzhou", 111.2792, 23.4851, "Earlier", "Guangxi", "🍵"],
+      ["Wuzhou", 111.2792, 23.4851, "Earlier", "Guangxi", "🍃"],
       ["Hezhou", 111.5665, 24.4141, "Earlier", "Guangxi", "🏘️"],
       ["Guilin", 110.2992, 25.2742, "Earlier", "Guangxi", "🏞️"],
       ["Foshan", 113.1224, 23.0288, "Earlier", "Guangdong", "🥋"],
@@ -501,6 +508,19 @@ author_profile: false
       ["Shantou", 116.6822, 23.3541, "2026", "Guangdong", "🫖"],
       ["Tianjin", 117.2010, 39.0842, "2026", "", "🎡"]
     ].map(([name, lng, lat, year, province, emoji]) => ({ name, lng, lat, year, province, emoji, country: "China" }));
+
+    const cityIcons = {
+      Beijing: '<img src="{{ "/images/footprint/temple-of-heaven.svg" | relative_url }}" width="24" height="24" alt="">'
+    };
+    const cityIconLabels = {
+      Beijing: '天坛 · Temple of Heaven',
+      Guangzhou: '早茶 · Cantonese morning tea',
+      Zhongshan: '乳鸽 · Roast pigeon',
+      Heyuan: '温泉 · Hot springs',
+      Shenzhen: '鹏城 · Roc City',
+      Lijiang: '玉龙雪山 · Jade Dragon Snow Mountain',
+      Wuzhou: '六堡茶 · Liubao tea'
+    };
 
     const mapElement = document.getElementById('footprint-map');
     const fallbackElement = document.getElementById('footprint-map-fallback');
@@ -627,7 +647,8 @@ author_profile: false
         card.className = 'footprint-place-card';
         card.dataset.placeIndex = index;
         card.setAttribute('aria-label', `Show ${place.name}, ${place.province ? `${place.province}, ` : ''}${place.country} on the map`);
-        card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true">${place.emoji}</span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.province ? `${place.province} · ` : ''}${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
+        card.innerHTML = `<span class="footprint-place-dot" aria-hidden="true">${cityIcons[place.name] || place.emoji}</span><span class="footprint-place-copy"><strong>${place.name}</strong><small>${place.province ? `${place.province} · ` : ''}${place.country}</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 18 6-6-6-6"></path></svg>`;
+        if (cityIconLabels[place.name]) card.querySelector('.footprint-place-dot').title = cityIconLabels[place.name];
         card.addEventListener('click', () => updateSelection(index, true, null));
         yearGrid.appendChild(card);
       });
