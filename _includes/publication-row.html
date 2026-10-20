@@ -13,9 +13,18 @@
     <div class="author">{{ paper.authors }}</div>
     <div class="periodical">{{ paper.conference }}</div>
     <div class="links">
-      {% assign link_types = 'pdf,page,code' | split: ',' %}
+      {% assign link_types = 'pdf,page,document,code,dataset,leaderboard,community,wechat' | split: ',' %}
       {% for link_type in link_types %}
-        {% case link_type %}{% when 'pdf' %}{% assign label = 'Paper' %}{% when 'page' %}{% assign label = 'Project Page' %}{% when 'code' %}{% assign label = 'Code' %}{% endcase %}
+        {% case link_type %}
+          {% when 'pdf' %}{% assign label = paper.pdf_label | default: 'Paper' %}
+          {% when 'page' %}{% assign label = 'Project Page' %}
+          {% when 'document' %}{% assign label = 'Document' %}
+          {% when 'code' %}{% assign label = 'Code' %}
+          {% when 'dataset' %}{% assign label = 'Dataset' %}
+          {% when 'leaderboard' %}{% assign label = 'Leaderboard' %}
+          {% when 'community' %}{% assign label = 'Community' %}
+          {% when 'wechat' %}{% assign label = '具身智能之心' %}
+        {% endcase %}
         {% assign link_url = paper[link_type] | default: '' | strip %}
         {% if link_url != '' %}
           <a href="{{ link_url }}" class="btn-outline" target="_blank" rel="noopener noreferrer">{{ label }}</a>

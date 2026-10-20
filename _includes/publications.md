@@ -76,6 +76,9 @@
 
 /* 按钮区域 */
 .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 12px;
 }
 
@@ -83,7 +86,6 @@
 .btn-outline {
   display: inline-block;
   padding: 4px 12px;
-  margin-right: 8px;
   font-size: 13px;
   font-weight: 500;
   color: #444;
@@ -91,6 +93,7 @@
   border: 1px solid #aaa;
   border-radius: 4px;
   text-decoration: none;
+  white-space: nowrap;
   transition: all 0.2s ease-in-out;
 }
 
@@ -114,8 +117,6 @@
 @media (max-width: 700px) {
   .pub-row { flex-direction: column; align-items: stretch; gap: 18px; }
   .pub-img-col { flex: none; width: 300px; max-width: 100%; margin-inline: auto; }
-  .links { display: flex; flex-wrap: wrap; gap: 8px; }
-  .btn-outline { margin-right: 0; }
 }
 </style>
 
