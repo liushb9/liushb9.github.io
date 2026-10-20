@@ -12,8 +12,8 @@ main:
     leaderboard: 'https://robovalue-benchmark.github.io/leaderboard/'
     community: 'https://robovalue-benchmark.github.io/community/'
     wechat: 'https://mp.weixin.qq.com/s/mwxJNB9CZdt97M39rcwHkw'
-    image: ./images/RoboValue.webp
-    image_full: /images/RoboValue-overview.png
+    image: ./images/RoboValue.webp?v=d6cd68d
+    image_full: /images/RoboValue-overview.png?v=d6cd68d
   - title: "Robo-Dopamine 2.0: History-Conditioned and OOD-Aware Process Reward Modeling for Robotic Manipulation"
     authors: "Yijie Xu, Haopeng Jin, Run Zhou, <strong>Shengbang Liu*</strong>, Sixiang Chen, Hongyang Cheng, Sicheng Hu, Peterson Co, Jinwen Luo, Huajie Tan, Shanghang Zhang"
     conference_short: "arXiv 2026"
